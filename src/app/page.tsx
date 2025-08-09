@@ -1,103 +1,194 @@
+import { Metadata } from "next";
+import { Hero } from "@/components/Hero";
+import { Section } from "@/components/Section";
+import { Card } from "@/components/Card";
+import Link from "next/link";
 import Image from "next/image";
+import { siteConfig } from "@/config/site";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Arthur M. Horwitz - Dual Identities: Living in Meier's Shadow",
+  description: "A personal exploration of second-generation trauma and identity. Inheriting history, carrying its echoes.",
+};
+
+const features = [
+  {
+    title: "About the Author",
+    description: "Discover the story behind Arthur Myron Horwitz and his journey of understanding second-generation trauma.",
+    href: "/author",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+    ),
+  },
+  {
+    title: "About the Book",
+    description: "Explore the themes, content, and significance of 'Dual Identities: Living in Meir's Shadow'.",
+    href: "/book",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    ),
+  },
+  {
+    title: "Themes",
+    description: "Dive deep into the central themes of second-generation trauma, memory, identity, and legacy.",
+    href: "/themes",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Events & Speaking",
+    description: "Join Arthur at upcoming events, speaking engagements, and book discussions.",
+    href: "/events",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Media & Press",
+    description: "Read press coverage, download media assets, and access press releases.",
+    href: "/press",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Contact",
+    description: "Get in touch with Arthur for speaking engagements, interviews, or general inquiries.",
+    href: "/contact",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main>
+      {/* Skip to content link */}
+      <a href="#main-content" className="skip-to-content">
+        Skip to content
+      </a>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Section */}
+      <Hero />
+
+      {/* Features Section */}
+      <Section id="main-content">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-serif font-bold text-black sm:text-4xl">
+            Explore the Journey
+          </h2>
+          <p className="mt-4 text-lg text-deep-gray max-w-4xl mx-auto">
+            Discover the profound themes and personal stories that shape this important work.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => (
+            <Card key={feature.title} className="group">
+              <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-sepia/10 text-sepia mb-4 group-hover:bg-sepia group-hover:text-white transition-colors duration-200">
+                {feature.icon}
+              </div>
+              <h3 className="text-xl font-serif font-bold text-black mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-deep-gray mb-4">
+                {feature.description}
+              </p>
+              <Link
+                href={feature.href}
+                className="inline-flex items-center text-sepia hover:text-sepia/80 font-medium transition-colors duration-200"
+              >
+                Learn more
+                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      {/* About Preview Section */}
+      <Section className="bg-deep-gray/5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl font-serif font-bold text-black sm:text-4xl mb-6">
+              About the Book
+            </h2>
+            <p className="text-lg text-deep-gray mb-6">
+              &quot;Dual Identities: Living in Meier&apos;s Shadow&quot; is a deeply personal exploration of second-generation trauma and the complex journey of identity formation for children of Holocaust survivors. Through vivid, compelling, and honest writing, Arthur M. Horwitz shares his story of growing up with &quot;dual identities&quot; - his own life and the one his uncle Meier never had.
+            </p>
+            <p className="text-deep-gray mb-8">
+              This groundbreaking memoir expands the Holocaust memoir genre by giving voice to children of survivors, exploring themes of coping, healing, reconciliation, and remembrance that hold universal appeal.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/book"
+                className="inline-flex items-center justify-center rounded-md bg-sepia px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-sepia/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sepia focus:ring-offset-2"
+              >
+                Read More
+              </Link>
+              <Link
+                href="/book#buy"
+                className="inline-flex items-center justify-center rounded-md border border-deep-gray px-6 py-3 text-base font-medium text-deep-gray shadow-sm hover:bg-deep-gray hover:text-off-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-deep-gray focus:ring-offset-2"
+              >
+                Buy Now
+              </Link>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="rounded-lg border border-deep-gray/20 overflow-hidden shadow-2xl">
+              <Image
+                src="/book-cover.jpg"
+                alt={siteConfig.book.title + " book cover"}
+                width={400}
+                height={533}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* CTA Section */}
+      <Section className="bg-sepia text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-serif font-bold sm:text-4xl mb-4">
+            Join the Conversation
+          </h2>
+          <p className="text-lg text-white/90 max-w-4xl mx-auto mb-8">
+            Connect with Arthur for speaking engagements, book discussions, or to share your own story of second-generation trauma and identity.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/events"
+              className="inline-flex items-center justify-center rounded-md bg-deep-gray px-6 py-3 text-base font-medium text-off-white shadow-sm hover:bg-deep-gray/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-deep-gray focus:ring-offset-2"
+            >
+              View Events
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-md border border-white px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-white hover:text-sepia transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </div>
+      </Section>
+    </main>
   );
 }

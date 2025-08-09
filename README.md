@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arthur Myron Horwitz - Dual Identities: Living in Meir's Shadow
+
+A Next.js 14 website for author Arthur Myron Horwitz to promote the book 'Dual Identities: Living in Meir's Shadow'.
+
+## Features
+
+- Modern, dignified design with respectful Holocaust themes
+- Responsive layout with mobile-first approach
+- Accessibility compliant (WCAG AA)
+- SEO optimized with proper metadata
+- TypeScript for type safety
+- Tailwind CSS for styling
+- Framer Motion for subtle animations
+
+## Tech Stack
+
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- ESLint/Prettier
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Add the author photo:
+   - Place `author-photo.jpg` in the `public/` directory
+   - The photo should be of Arthur Myron Horwitz speaking at an event with candles in the foreground
+   - Recommended size: 800x800px or larger for good quality
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Structure
+
+```
+src/
+├── app/                    # App Router pages
+│   ├── author/            # About the Author page
+│   ├── book/              # About the Book page
+│   ├── contact/           # Contact page
+│   ├── themes/            # Themes page
+│   └── layout.tsx         # Root layout
+├── components/            # Reusable components
+│   ├── SiteHeader.tsx     # Navigation header
+│   ├── SiteFooter.tsx     # Footer
+│   ├── Hero.tsx          # Hero section
+│   ├── Card.tsx          # Card component
+│   └── ...
+├── config/               # Site configuration
+│   └── site.ts          # Site metadata and links
+└── lib/                  # Utility functions
+    └── utils.ts         # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Content Management
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Site configuration: `src/config/site.ts`
+- Page content: Edit the respective page files in `src/app/`
+- Styling: Tailwind CSS classes in component files
+- Images: Place in `public/` directory
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+The site is ready for deployment on Vercel, Netlify, or any other hosting platform that supports Next.js.
 
-To learn more about Next.js, take a look at the following resources:
+## Accessibility
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- WCAG AA compliant
+- Keyboard navigation support
+- Screen reader friendly
+- High contrast design
+- Focus states for all interactive elements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is private and confidential.
