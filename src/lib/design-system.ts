@@ -76,7 +76,7 @@ export const buttonVariants = {
       lg: 'px-8 py-4 text-lg',
     }
   },
-  secondary: {
+  outline: {
     base: 'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer border shadow-sm hover:shadow-md',
     colors: 'bg-transparent text-charcoal border-charcoal/40 hover:bg-charcoal/5 hover:border-charcoal/60 hover:shadow-lg focus:ring-burgundy/50',
     sizes: {
@@ -85,7 +85,7 @@ export const buttonVariants = {
       lg: 'px-8 py-4 text-lg',
     }
   },
-  outline: {
+  secondary: {
     base: 'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer border shadow-sm hover:shadow-md',
     colors: 'bg-transparent text-burgundy border-burgundy hover:bg-burgundy/5 hover:border-burgundy/80 focus:ring-burgundy',
     sizes: {

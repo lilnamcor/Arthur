@@ -7,6 +7,7 @@ import { StayConnected } from "@/components/StayConnected";
 import { componentUtils } from "@/lib/design-system";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Books About the Holocaust | Second Generation Holocaust Books | Arthur M. Horwitz - Dual Identities: Living in Meier's Shadow",
@@ -153,12 +154,14 @@ export default function HomePage() {
             <p className={`mb-8 ${componentUtils.text.secondary}`}>
               As one of the definitive <strong>books about 2nd generation holocaust</strong> experiences, this work expands the Holocaust memoir genre by giving voice to children of survivors, exploring themes of coping, healing, reconciliation, and remembrance that hold universal appeal for anyone seeking to understand the lasting impact of the Holocaust on families and communities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <CTAButton variant="secondary" size="lg">
-                Read More About This Holocaust Book
-              </CTAButton>
-              <CTAButton variant="outline" size="lg">
-                Buy This Second Generation Holocaust Book
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/second-generation">
+                <CTAButton variant="secondary" size="lg" className="w-full sm:w-auto">
+                  Learn More
+                </CTAButton>
+              </Link>
+              <CTAButton variant="outline" size="lg" className="w-full sm:w-auto">
+                Buy Book
               </CTAButton>
             </div>
           </div>
