@@ -78,7 +78,7 @@ export const buttonVariants = {
   },
   secondary: {
     base: 'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer border shadow-sm hover:shadow-md',
-    colors: 'bg-gradient-to-br from-parchment to-cream text-charcoal border-brown/40 hover:from-parchment/90 hover:to-cream/90 hover:border-brown/60 hover:shadow-lg focus:ring-burgundy/50 hover:scale-[1.02]',
+    colors: 'bg-transparent text-charcoal border-charcoal/40 hover:bg-charcoal/5 hover:border-charcoal/60 hover:shadow-lg focus:ring-burgundy/50',
     sizes: {
       sm: 'px-4 py-2 text-sm',
       md: 'px-6 py-3 text-base',
