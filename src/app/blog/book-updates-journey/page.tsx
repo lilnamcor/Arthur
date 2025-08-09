@@ -26,7 +26,7 @@ export default function BookUpdatesJourneyPage() {
             Book Updates: The Journey to Publication
           </h1>
           <p className={`text-xl max-w-4xl mx-auto ${componentUtils.text.secondary}`}>
-            Updates on the publication process and what readers can expect from "Dual Identities: Living in Meier's Shadow."
+            Updates on the publication process and what readers can expect from &ldquo;Dual Identities: Living in Meier&apos;s Shadow.&rdquo;
           </p>
         </div>
       </Section>
@@ -36,12 +36,12 @@ export default function BookUpdatesJourneyPage() {
         <div className="max-w-4xl mx-auto prose prose-lg">
           <p className={`text-lg leading-relaxed ${componentUtils.text.secondary}`}>
             Writing a book is a journey—one that begins long before the first word is written and continues long 
-            after the last word is typed. For me, the journey to publishing "Dual Identities: Living in Meier's Shadow" 
+            after the last word is typed. For me, the journey to publishing &ldquo;Dual Identities: Living in Meier&apos;s Shadow&rdquo; 
             has been both deeply personal and profoundly transformative.
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            As I write this, we're in the final stages of the publication process. The manuscript has been completed, 
+            As I write this, we&apos;re in the final stages of the publication process. The manuscript has been completed, 
             edited, and revised. The cover design has been finalized. The marketing materials are being prepared. 
             And soon, very soon, the book will be available to readers.
           </p>
@@ -51,9 +51,9 @@ export default function BookUpdatesJourneyPage() {
           </h2>
 
           <p className={`${componentUtils.text.secondary}`}>
-            The writing process for "Dual Identities" began many years ago, though I didn't know it at the time. 
+            The writing process for &ldquo;Dual Identities&rdquo; began many years ago, though I didn&apos;t know it at the time. 
             It began with the stories I heard growing up, with the questions I asked and the answers I received 
-            (or didn't receive), with the feelings and experiences that shaped my understanding of who I was and 
+            (or didn&apos;t receive), with the feelings and experiences that shaped my understanding of who I was and 
             where I came from.
           </p>
 
@@ -67,7 +67,7 @@ export default function BookUpdatesJourneyPage() {
           <p className={`${componentUtils.text.secondary}`}>
             The writing process was not always easy. There were times when the memories and emotions were so 
             overwhelming that I had to step away from the work for days or weeks at a time. There were times when 
-            I questioned whether I had the right to tell these stories, whether I was doing justice to my parents' 
+            I questioned whether I had the right to tell these stories, whether I was doing justice to my parents&apos; 
             experiences, whether anyone would want to read what I had to say.
           </p>
 
@@ -98,13 +98,13 @@ export default function BookUpdatesJourneyPage() {
           </h2>
 
           <p className={`${componentUtils.text.secondary}`}>
-            The publication process has been both exciting and nerve-wracking. There's something surreal about 
+            The publication process has been both exciting and nerve-wracking. There&apos;s something surreal about 
             seeing your work transformed from a manuscript into a book—about seeing the cover design, the layout, 
             the final product that will be available to readers.
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            The publication process has also involved many decisions that I hadn't anticipated when I first began 
+            The publication process has also involved many decisions that I hadn&apos;t anticipated when I first began 
             writing. Decisions about the cover design, the title, the marketing materials, the publication date. 
             Each decision has felt important, as if it could make the difference between the book reaching its 
             intended audience or not.
@@ -113,7 +113,7 @@ export default function BookUpdatesJourneyPage() {
           <p className={`${componentUtils.text.secondary}`}>
             But perhaps the most challenging aspect of the publication process has been the waiting. The time 
             between completing the manuscript and seeing the final book can feel interminable, especially when 
-            you're eager to share your work with readers.
+            you&apos;re eager to share your work with readers.
           </p>
 
           <h2 className={`text-2xl font-serif font-bold mt-8 mb-4 ${componentUtils.text.primary}`}>
@@ -121,9 +121,9 @@ export default function BookUpdatesJourneyPage() {
           </h2>
 
           <p className={`${componentUtils.text.secondary}`}>
-            "Dual Identities: Living in Meier's Shadow" is a deeply personal memoir that explores the complex 
+            &ldquo;Dual Identities: Living in Meier&apos;s Shadow&rdquo; is a deeply personal memoir that explores the complex 
             relationship between second-generation trauma and identity formation. The book tells the story of my 
-            own journey of understanding—how I came to understand my parents' experiences during the Holocaust, 
+            own journey of understanding—how I came to understand my parents&apos; experiences during the Holocaust, 
             how those experiences shaped my own identity, and how I learned to carry that inheritance forward 
             with dignity and purpose.
           </p>
@@ -131,12 +131,12 @@ export default function BookUpdatesJourneyPage() {
           <p className={`${componentUtils.text.secondary}`}>
             The book is structured around several key themes: the transmission of trauma from one generation to 
             the next, the complex relationship between memory and identity, the challenges of integrating inherited 
-            trauma into one's own identity, and the pathways to healing and understanding.
+            trauma into one&apos;s own identity, and the pathways to healing and understanding.
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            But the book is not just about trauma—it's also about resilience, about survival, about the human 
-            capacity to endure and to hope. It's about the ways in which our inheritance can be both a burden 
+            But the book is not just about trauma—it&apos;s also about resilience, about survival, about the human 
+            capacity to endure and to hope. It&apos;s about the ways in which our inheritance can be both a burden 
             and a source of strength, and about how we can choose to carry that inheritance forward in ways that 
             are meaningful and purposeful.
           </p>
@@ -147,12 +147,12 @@ export default function BookUpdatesJourneyPage() {
 
           <p className={`${componentUtils.text.secondary}`}>
             As the publication date approaches, I find myself thinking about the potential impact of the book. 
-            My hope is that "Dual Identities" will help other children of survivors understand their own experiences 
+            My hope is that &ldquo;Dual Identities&rdquo; will help other children of survivors understand their own experiences 
             better, that it will provide them with a framework for understanding and processing their own inherited trauma.
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            But I also hope that the book will reach a broader audience—that it will help people who don't have 
+            But I also hope that the book will reach a broader audience—that it will help people who don&apos;t have 
             direct experience with inherited trauma understand the complex ways in which trauma can be transmitted 
             from one generation to the next, and the importance of supporting those who carry this inheritance.
           </p>
@@ -168,7 +168,7 @@ export default function BookUpdatesJourneyPage() {
           </h2>
 
           <p className={`${componentUtils.text.secondary}`}>
-            As I look forward to the publication of "Dual Identities," I'm filled with a mix of emotions: excitement, 
+            As I look forward to the publication of &ldquo;Dual Identities,&rdquo; I&apos;m filled with a mix of emotions: excitement, 
             nervousness, gratitude, and hope. Excitement about finally sharing this work with readers. Nervousness 
             about how it will be received. Gratitude for all the people who have supported me on this journey. 
             And hope that the book will make a positive difference in the lives of those who read it.
@@ -181,7 +181,7 @@ export default function BookUpdatesJourneyPage() {
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            As the book prepares to make its way into the world, I'm reminded that this is not the end of the journey, 
+            As the book prepares to make its way into the world, I&apos;m reminded that this is not the end of the journey, 
             but the beginning of a new chapter. The book will take on a life of its own, reaching readers I may never 
             meet, touching lives in ways I may never know. And that, perhaps, is the greatest reward of all.
           </p>
@@ -191,21 +191,21 @@ export default function BookUpdatesJourneyPage() {
           </h2>
 
           <p className={`${componentUtils.text.secondary}`}>
-            The journey to publishing "Dual Identities: Living in Meier's Shadow" has been one of the most 
+            The journey to publishing &ldquo;Dual Identities: Living in Meier&apos;s Shadow&rdquo; has been one of the most 
             meaningful experiences of my life. It has challenged me, transformed me, and given me the opportunity 
             to share my story with others who may find it helpful or meaningful.
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            As the publication date approaches, I'm filled with gratitude for all the people who have supported 
+            As the publication date approaches, I&apos;m filled with gratitude for all the people who have supported 
             me on this journey—my family, my friends, my editors, and all the others who have helped make this 
-            book possible. And I'm filled with hope that the book will make a positive difference in the lives 
+            book possible. And I&apos;m filled with hope that the book will make a positive difference in the lives 
             of those who read it.
           </p>
 
           <div className="mt-12 pt-8 border-t border-brown/20">
             <p className={`text-sm ${componentUtils.text.light}`}>
-              <strong>About the Author:</strong> Arthur M. Horwitz is the author of "Dual Identities: Living in Meier's Shadow," 
+              <strong>About the Author:</strong> Arthur M. Horwitz is the author of &ldquo;Dual Identities: Living in Meier&apos;s Shadow,&rdquo; 
               a memoir exploring second-generation trauma and identity formation. He is available for speaking engagements 
               and workshops on these topics.
             </p>

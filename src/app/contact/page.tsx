@@ -5,7 +5,6 @@ import { Card } from "@/components/Card";
 import { CTAButton } from "@/components/CTAButton";
 import { IconContainer } from "@/components/IconContainer";
 import { componentUtils } from "@/lib/design-system";
-import Link from "next/link";
 import { useState } from "react";
 
 export default function ContactPage() {

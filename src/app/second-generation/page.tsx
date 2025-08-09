@@ -292,12 +292,16 @@ export default function SecondGenerationPage() {
             Start with Arthur M. Horwitz&apos;s groundbreaking memoir about <strong>second generation Holocaust survivors</strong> - &ldquo;Dual Identities: Living in Meier&apos;s Shadow.&rdquo;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton variant="primary" size="lg">
-              Get Your Copy Today
-            </CTAButton>
-            <CTAButton variant="outline" size="lg">
-              Learn More About the Author
-            </CTAButton>
+            <Link href="/book">
+              <CTAButton variant="primary" size="lg" className="w-full sm:w-auto">
+                Get Your Copy Today
+              </CTAButton>
+            </Link>
+            <Link href="/author">
+              <CTAButton variant="outline" size="lg" className="w-full sm:w-auto">
+                Learn More About the Author
+              </CTAButton>
+            </Link>
           </div>
         </div>
       </Section>

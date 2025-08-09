@@ -37,13 +37,13 @@ export default function UnderstandingSecondGenerationTraumaPage() {
           <p className={`text-lg leading-relaxed ${componentUtils.text.secondary}`}>
             Growing up as the child of Holocaust survivors, I often felt like I was living in two worlds simultaneously. 
             There was the world of my own experiences—school, friends, the everyday rhythms of American life—and then 
-            there was the shadow world of my parents' past, a world I could never fully access but whose presence was 
+            there was the shadow world of my parents&apos; past, a world I could never fully access but whose presence was 
             always felt, like a distant echo that never quite faded.
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
             This is what we call second-generation trauma: the psychological and emotional inheritance of trauma that 
-            wasn't directly experienced but was transmitted through the family system. It's a complex phenomenon that 
+            wasn&apos;t directly experienced but was transmitted through the family system. It&apos;s a complex phenomenon that 
             affects millions of people worldwide, not just children of Holocaust survivors, but also children of war 
             veterans, refugees, and others who have experienced profound trauma.
           </p>
@@ -53,7 +53,7 @@ export default function UnderstandingSecondGenerationTraumaPage() {
           </h2>
 
           <p className={`${componentUtils.text.secondary}`}>
-            Trauma doesn't exist in isolation. When someone experiences a traumatic event, the effects ripple outward, 
+            Trauma doesn&apos;t exist in isolation. When someone experiences a traumatic event, the effects ripple outward, 
             affecting not just the individual but their entire family system. For children of survivors, this transmission 
             can happen in many ways: through stories (or the absence of stories), through behavioral patterns, through 
             the emotional atmosphere of the home, and through the unspoken expectations and fears that shape family dynamics.
@@ -73,14 +73,14 @@ export default function UnderstandingSecondGenerationTraumaPage() {
           <p className={`${componentUtils.text.secondary}`}>
             For children of survivors, the process of identity formation is complicated by the need to integrate two 
             very different realities: their own lived experience and the inherited trauma of their parents. This can 
-            lead to what I call "dual identities"—the sense of living both in the present and in the shadow of the past.
+            lead to what I call &ldquo;dual identities&rdquo;—the sense of living both in the present and in the shadow of the past.
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
             This dual identity can manifest in many ways. Some children of survivors feel a deep sense of responsibility 
-            to honor their parents' suffering by living meaningful lives. Others struggle with feelings of guilt—guilt 
+            to honor their parents&apos; suffering by living meaningful lives. Others struggle with feelings of guilt—guilt 
             for having been born into safety when their parents suffered so much, or guilt for not being able to fully 
-            understand or alleviate their parents' pain.
+            understand or alleviate their parents&apos; pain.
           </p>
 
           <h2 className={`text-2xl font-serif font-bold mt-8 mb-4 ${componentUtils.text.primary}`}>
@@ -89,14 +89,14 @@ export default function UnderstandingSecondGenerationTraumaPage() {
 
           <p className={`${componentUtils.text.secondary}`}>
             Understanding second-generation trauma is not about dwelling in the past or seeing oneself as a victim. 
-            Rather, it's about acknowledging the complexity of our inheritance and finding ways to integrate it into 
+            Rather, it&apos;s about acknowledging the complexity of our inheritance and finding ways to integrate it into 
             our own identity in a healthy and meaningful way.
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            For me, this process began with education—learning about the historical context of my parents' experiences 
+            For me, this process began with education—learning about the historical context of my parents&apos; experiences 
             and understanding the broader patterns of trauma transmission. It continued with therapy, where I could 
-            explore the ways in which my parents' trauma had shaped my own emotional landscape. And it culminated in 
+            explore the ways in which my parents&apos; trauma had shaped my own emotional landscape. And it culminated in 
             writing, which became a way for me to process my own experiences and, hopefully, to help others who are 
             on similar journeys.
           </p>
@@ -106,15 +106,15 @@ export default function UnderstandingSecondGenerationTraumaPage() {
           </h2>
 
           <p className={`${componentUtils.text.secondary}`}>
-            One of the most important realizations I've had is that second-generation trauma doesn't have to be a 
+            One of the most important realizations I&apos;ve had is that second-generation trauma doesn&apos;t have to be a 
             burden that weighs us down. Instead, it can be a source of strength, empathy, and purpose. The very 
             qualities that can make life challenging for children of survivors—heightened sensitivity, deep empathy, 
             a strong sense of justice, and a profound appreciation for life—can also be our greatest gifts.
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            By understanding our inheritance, we can choose how to carry it forward. We can honor our parents' 
-            experiences not by being defined by them, but by using the wisdom and resilience we've inherited to 
+            By understanding our inheritance, we can choose how to carry it forward. We can honor our parents&apos; 
+            experiences not by being defined by them, but by using the wisdom and resilience we&apos;ve inherited to 
             make the world a better place. We can transform the trauma of the past into a source of meaning and 
             purpose in the present.
           </p>
@@ -124,21 +124,21 @@ export default function UnderstandingSecondGenerationTraumaPage() {
           </h2>
 
           <p className={`${componentUtils.text.secondary}`}>
-            Understanding second-generation trauma is a journey, not a destination. It's a process of ongoing 
+            Understanding second-generation trauma is a journey, not a destination. It&apos;s a process of ongoing 
             exploration, reflection, and integration. For those of us who carry this inheritance, the goal is 
             not to overcome it or to leave it behind, but to understand it, to honor it, and to find ways to 
             carry it forward with dignity and purpose.
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            In the end, our inheritance is not just about trauma—it's also about resilience, about survival, 
+            In the end, our inheritance is not just about trauma—it&apos;s also about resilience, about survival, 
             about the human capacity to endure and to hope. By understanding and embracing this complexity, 
             we can find our own path to healing and wholeness, while honoring the experiences that have shaped us.
           </p>
 
           <div className="mt-12 pt-8 border-t border-brown/20">
             <p className={`text-sm ${componentUtils.text.light}`}>
-              <strong>About the Author:</strong> Arthur M. Horwitz is the author of "Dual Identities: Living in Meier's Shadow," 
+              <strong>About the Author:</strong> Arthur M. Horwitz is the author of &ldquo;Dual Identities: Living in Meier&apos;s Shadow,&rdquo; 
               a memoir exploring second-generation trauma and identity formation. He is available for speaking engagements 
               and workshops on these topics.
             </p>

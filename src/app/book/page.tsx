@@ -3,7 +3,6 @@ import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { CTAButton } from "@/components/CTAButton";
 import { componentUtils } from "@/lib/design-system";
-import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 

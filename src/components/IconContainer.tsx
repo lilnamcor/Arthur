@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { componentUtils } from "@/lib/design-system";
 
 interface IconContainerProps {
   children: ReactNode;

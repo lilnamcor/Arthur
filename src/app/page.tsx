@@ -6,7 +6,6 @@ import { CTAButton } from "@/components/CTAButton";
 import { StayConnected } from "@/components/StayConnected";
 import { componentUtils } from "@/lib/design-system";
 import Image from "next/image";
-import { siteConfig } from "@/config/site";
 import Link from "next/link";
 
 export const metadata: Metadata = {

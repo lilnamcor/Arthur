@@ -73,13 +73,13 @@ export default function BooksAboutHolocaustPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className={`text-3xl font-serif font-bold mb-6 ${componentUtils.text.primary}`}>
-              Featured Book: Dual Identities: Living in Meier's Shadow
+              Featured Book: Dual Identities: Living in Meier&apos;s Shadow
             </h2>
             <p className={`text-lg mb-6 ${componentUtils.text.secondary}`}>
-              One of the most important <strong>books about the Holocaust</strong> and <strong>second generation Holocaust trauma</strong> available today, "Dual Identities: Living in Meier's Shadow" by Arthur M. Horwitz offers readers a unique window into the lasting impact of the Holocaust on families and communities.
+              One of the most important <strong>books about the Holocaust</strong> and <strong>second generation Holocaust trauma</strong> available today, &ldquo;Dual Identities: Living in Meier&apos;s Shadow&rdquo; by Arthur M. Horwitz offers readers a unique window into the lasting impact of the Holocaust on families and communities.
             </p>
             <p className={`mb-6 ${componentUtils.text.secondary}`}>
-              This groundbreaking memoir explores the complex journey of identity formation for children of Holocaust survivors, offering a unique perspective on how trauma is inherited and shapes entire families. Through vivid, compelling, and honest writing, Horwitz shares his story of growing up with "dual identities" - his own life and the one his uncle Meier never had.
+              This groundbreaking memoir explores the complex journey of identity formation for children of Holocaust survivors, offering a unique perspective on how trauma is inherited and shapes entire families. Through vivid, compelling, and honest writing, Horwitz shares his story of growing up with &ldquo;dual identities&rdquo; - his own life and the one his uncle Meier never had.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/second-generation">
@@ -153,7 +153,7 @@ export default function BooksAboutHolocaustPage() {
               Academic and Historical Works
             </h3>
             <p className={`mb-4 ${componentUtils.text.secondary}`}>
-              Scholarly works that provide historical context, analysis, and understanding of the Holocaust's broader impact.
+              Scholarly works that provide historical context, analysis, and understanding of the Holocaust&apos;s broader impact.
             </p>
             <ul className={`space-y-2 text-sm ${componentUtils.text.secondary}`}>
               <li>• Historical analysis</li>
@@ -252,7 +252,7 @@ export default function BooksAboutHolocaustPage() {
             Start Your Journey with Holocaust Books
           </h2>
           <p className={`text-lg max-w-4xl mx-auto mb-8 ${componentUtils.text.secondary}`}>
-            Begin with Arthur M. Horwitz's groundbreaking <strong>book about the Holocaust</strong> and <strong>second generation Holocaust trauma</strong> - "Dual Identities: Living in Meier's Shadow." This essential work offers a unique perspective on inherited trauma and the lasting impact of the Holocaust on families and communities.
+            Begin with Arthur M. Horwitz&apos;s groundbreaking <strong>book about the Holocaust</strong> and <strong>second generation Holocaust trauma</strong> - &ldquo;Dual Identities: Living in Meier&apos;s Shadow.&rdquo; This essential work offers a unique perspective on inherited trauma and the lasting impact of the Holocaust on families and communities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <CTAButton variant="primary" size="lg">

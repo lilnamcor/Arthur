@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { SocialMediaLinks } from "@/components/SocialMediaLinks";
@@ -47,7 +46,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <CTAButton variant="primary" size="lg" className="transform hover:scale-105">
+              <CTAButton variant="primary" size="lg">
                 Buy the Book Now
               </CTAButton>
               <CTAButton variant="outline" size="lg">

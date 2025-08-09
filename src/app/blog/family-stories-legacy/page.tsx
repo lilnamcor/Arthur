@@ -78,16 +78,16 @@ export default function FamilyStoriesLegacyPage() {
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            In many families, these difficult stories are kept silent, either because they're too painful to share or 
-            because there's a desire to protect the next generation from the harsh realities of the past. But silence 
+            In many families, these difficult stories are kept silent, either because they&apos;re too painful to share or 
+            because there&apos;s a desire to protect the next generation from the harsh realities of the past. But silence 
             can be just as damaging as the stories themselves.
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            When stories are kept silent, they don't disappear—they just go underground, manifesting in other ways: 
+            When stories are kept silent, they don&apos;t disappear—they just go underground, manifesting in other ways: 
             in unexplained fears, in behavioral patterns, in emotional reactions that seem to come from nowhere. 
             These unspoken stories can be just as powerful as the ones that are told, and often more so because 
-            they're not open to discussion or understanding.
+            they&apos;re not open to discussion or understanding.
           </p>
 
           <h2 className={`text-2xl font-serif font-bold mt-8 mb-4 ${componentUtils.text.primary}`}>
@@ -95,19 +95,19 @@ export default function FamilyStoriesLegacyPage() {
           </h2>
 
           <p className={`${componentUtils.text.secondary}`}>
-            Preserving family stories, especially difficult ones, requires a commitment to truth. This doesn't mean 
+            Preserving family stories, especially difficult ones, requires a commitment to truth. This doesn&apos;t mean 
             that every detail needs to be shared or that stories need to be told in graphic detail. But it does mean 
             that the essential truths of these stories—the facts, the emotions, the impact—need to be acknowledged and respected.
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            Truth in family stories is not just about accuracy—it's also about authenticity. It's about telling 
+            Truth in family stories is not just about accuracy—it&apos;s also about authenticity. It&apos;s about telling 
             the stories in a way that honors the experiences of those who lived them, while also being sensitive 
             to the needs of those who are hearing them.
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            This can be a delicate balance. On the one hand, we want to preserve the full truth of our family's 
+            This can be a delicate balance. On the one hand, we want to preserve the full truth of our family&apos;s 
             experiences, including the difficult and painful parts. On the other hand, we want to tell these stories 
             in a way that is healing rather than traumatizing, that honors the resilience and strength of our ancestors 
             rather than just focusing on their suffering.
@@ -123,7 +123,7 @@ export default function FamilyStoriesLegacyPage() {
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            Being a storyteller means more than just repeating the stories we've heard. It means understanding them, 
+            Being a storyteller means more than just repeating the stories we&apos;ve heard. It means understanding them, 
             processing them, and finding ways to tell them that are meaningful and relevant to new audiences. It means 
             finding the universal truths in these very personal stories and sharing them in ways that can help others 
             understand their own experiences.
@@ -147,7 +147,7 @@ export default function FamilyStoriesLegacyPage() {
           </p>
 
           <p className={`${componentUtils.text.secondary}`}>
-            For me, carrying forward my family's stories has meant finding ways to share them that are both personal 
+            For me, carrying forward my family&apos;s stories has meant finding ways to share them that are both personal 
             and universal. It has meant writing about my experiences as a child of survivors, speaking to groups about 
             second-generation trauma, and working with others who are trying to understand and process their own 
             inherited trauma.
@@ -202,7 +202,7 @@ export default function FamilyStoriesLegacyPage() {
 
           <div className="mt-12 pt-8 border-t border-brown/20">
             <p className={`text-sm ${componentUtils.text.light}`}>
-              <strong>About the Author:</strong> Arthur M. Horwitz is the author of "Dual Identities: Living in Meier's Shadow," 
+              <strong>About the Author:</strong> Arthur M. Horwitz is the author of &ldquo;Dual Identities: Living in Meier&apos;s Shadow,&rdquo; 
               a memoir exploring second-generation trauma and identity formation. He is available for speaking engagements 
               and workshops on these topics.
             </p>

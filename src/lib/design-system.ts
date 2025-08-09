@@ -68,7 +68,7 @@ export const textVariants = {
 
 export const buttonVariants = {
   primary: {
-    base: 'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer shadow-sm hover:shadow-md',
+    base: 'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer shadow-sm hover:shadow-md transform hover:scale-105',
     colors: 'bg-gradient-to-r from-burgundy to-brown text-white hover:from-burgundy/90 hover:to-brown/90 focus:ring-burgundy',
     sizes: {
       sm: 'px-4 py-2 text-sm',

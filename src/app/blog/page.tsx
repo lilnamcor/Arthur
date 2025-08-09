@@ -1,10 +1,8 @@
 import { Metadata } from "next";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
-import { CTAButton } from "@/components/CTAButton";
 import { StayConnected } from "@/components/StayConnected";
 import { componentUtils } from "@/lib/design-system";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Blog - Arthur M. Horwitz",
