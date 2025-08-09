@@ -1,13 +1,33 @@
 import { Metadata } from "next";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
-import Link from "next/link";
+import { CTAButton } from "@/components/CTAButton";
+import { componentUtils } from "@/lib/design-system";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "About the Book - Dual Identities: Living in Meier's Shadow",
-  description: "Explore the themes, content, and significance of 'Dual Identities: Living in Meier's Shadow' by Arthur M. Horwitz.",
+  title: "Books About the Holocaust | Second Generation Holocaust Books | Dual Identities: Living in Meier's Shadow",
+  description: "Discover one of the most important books about the Holocaust and second generation Holocaust trauma. 'Dual Identities: Living in Meier's Shadow' by Arthur M. Horwitz explores inherited trauma, Holocaust memory, and identity formation for children of survivors. Essential reading for understanding Holocaust impact across generations.",
+  keywords: [
+    "books about the holocaust",
+    "holocaust books",
+    "second generation holocaust books",
+    "books about 2nd generation holocaust", 
+    "holocaust survivor children books",
+    "inherited trauma books",
+    "Dual Identities Living in Meier's Shadow",
+    "Arthur M. Horwitz",
+    "second-generation trauma",
+    "Holocaust memory",
+    "children of holocaust survivors"
+  ],
+  openGraph: {
+    title: "Books About the Holocaust | Second Generation Holocaust Books | Dual Identities: Living in Meier's Shadow",
+    description: "Discover one of the most important books about the Holocaust and second generation Holocaust trauma. Essential reading for understanding Holocaust impact across generations.",
+    type: "website",
+    url: "https://arthurmyronhorwitz.com/book",
+  },
 };
 
 const earlyPraise = [
@@ -27,35 +47,29 @@ export default function BookPage() {
   return (
     <main>
       {/* Hero Section */}
-      <Section className="bg-deep-gray/5">
+      <Section className={componentUtils.background.accent}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-4xl font-serif font-bold text-black sm:text-6xl mb-6">
-              {siteConfig.book.title}
+            <h1 className={`text-4xl font-serif font-bold sm:text-6xl mb-6 ${componentUtils.text.primary}`}>
+              Books About the Holocaust: Second Generation Perspective
             </h1>
-            <p className="text-xl text-deep-gray mb-6">
-              {siteConfig.book.subtitle}
+            <p className={`text-xl mb-6 ${componentUtils.text.secondary}`}>
+              {siteConfig.book.subtitle} - One of the most important <strong>books about the Holocaust</strong> and <strong>second generation Holocaust trauma</strong> available today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="#buy"
-                className="inline-flex items-center justify-center rounded-md bg-sepia px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-sepia/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sepia focus:ring-offset-2"
-              >
-                Buy Now
-              </Link>
-              <Link
-                href="/themes"
-                className="inline-flex items-center justify-center rounded-md border border-deep-gray px-6 py-3 text-base font-medium text-deep-gray shadow-sm hover:bg-deep-gray hover:text-off-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-deep-gray focus:ring-offset-2"
-              >
-                Explore Themes
-              </Link>
+              <CTAButton variant="primary" size="lg">
+                Buy This Holocaust Book
+              </CTAButton>
+              <CTAButton variant="outline" size="lg">
+                Explore Holocaust Themes
+              </CTAButton>
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-[3/4] rounded-lg border border-deep-gray/20 overflow-hidden shadow-2xl">
+            <div className="aspect-[3/4] rounded-2xl border border-brown/20 overflow-hidden shadow-xl bg-parchment">
               <Image
                 src="/book-cover.jpg"
-                alt={siteConfig.book.title + " book cover"}
+                alt="Dual Identities: Living in Meier's Shadow - Book about Holocaust and Second Generation Trauma"
                 width={400}
                 height={533}
                 className="w-full h-full object-cover"
@@ -67,61 +81,65 @@ export default function BookPage() {
       </Section>
 
       {/* Book Details */}
-      <Section>
+      <Section className={componentUtils.background.primary}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-3xl font-serif font-bold text-black mb-6">
-              About the Book
+            <h2 className={`text-3xl font-serif font-bold mb-6 ${componentUtils.text.primary}`}>
+              About This Holocaust Book: Second Generation Trauma
             </h2>
             <div className="prose prose-lg max-w-none">
-              <p className="text-deep-gray mb-6">
+              <p className={`mb-6 ${componentUtils.text.secondary}`}>
                 &quot;You hear nothing!&quot;
               </p>
 
-              <p className="text-deep-gray mb-6">
+              <p className={`mb-6 ${componentUtils.text.secondary}`}>
                 Like many young children of Holocaust survivors, Arthur hears too much. Sally Finkelstein Horwitz has a lot to say. About heroism and horror. Luck and loss. Resilience and remorse. Antisemitism and spineless American Jews. Hiding in closets or a bath tub, Arthur inhales the second-hand smoke of unfiltered tales she shares with friends and other survivors.
               </p>
 
-              <p className="text-deep-gray mb-6">
+              <p className={`mb-6 ${componentUtils.text.secondary}`}>
                 To cope with scenes of trauma, humiliation and death, she often fantasizes about an emotional reunion with her father and little brother, Meier. It is not to be. Reality intervenes.
               </p>
 
-              <p className="text-deep-gray mb-6">
+              <p className={`mb-6 ${componentUtils.text.secondary}`}>
                 &quot;This is a photo of my little brother. This is who you are named for!&quot; she insists.
               </p>
 
-              <p className="text-deep-gray mb-6">
+              <p className={`mb-6 ${componentUtils.text.secondary}`}>
                 But this clipped, iconic Holocaust image discovered in her wallet sleeve isn&apos;t, and there&apos;s no playing along. Insolence is punished with a decree - live two lives, yours and the one Meier never had. Resentment and frustration grow while navigating the real-world challenges of building a life, family and media industry career.
+              </p>
+              
+              <p className={`mb-6 ${componentUtils.text.secondary}`}>
+                This powerful <strong>book about the Holocaust</strong> and <strong>second generation Holocaust trauma</strong> offers readers a unique window into the lasting impact of the Holocaust on families and communities, making it essential reading for anyone seeking to understand the complex legacy of this historical tragedy.
               </p>
             </div>
           </div>
           <div>
             <Card>
-              <h3 className="text-xl font-serif font-bold text-black mb-4">Book Details</h3>
+              <h3 className={`text-xl font-serif font-bold mb-4 ${componentUtils.text.primary}`}>Book Details</h3>
               <dl className="space-y-3">
                 <div>
-                  <dt className="font-semibold text-deep-gray">Title</dt>
-                  <dd className="text-black">{siteConfig.book.title}</dd>
+                  <dt className={`font-semibold ${componentUtils.text.secondary}`}>Title</dt>
+                  <dd className={componentUtils.text.primary}>{siteConfig.book.title}</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-deep-gray">Author</dt>
-                  <dd className="text-black">{siteConfig.name}</dd>
+                  <dt className={`font-semibold ${componentUtils.text.secondary}`}>Author</dt>
+                  <dd className={componentUtils.text.primary}>{siteConfig.name}</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-deep-gray">Publisher</dt>
-                  <dd className="text-black">{siteConfig.book.publisher}</dd>
+                  <dt className={`font-semibold ${componentUtils.text.secondary}`}>Publisher</dt>
+                  <dd className={componentUtils.text.primary}>{siteConfig.book.publisher}</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-deep-gray">Publication Date</dt>
-                  <dd className="text-black">{siteConfig.book.publicationDate}</dd>
+                  <dt className={`font-semibold ${componentUtils.text.secondary}`}>Publication Date</dt>
+                  <dd className={componentUtils.text.primary}>{siteConfig.book.publicationDate}</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-deep-gray">ISBN</dt>
-                  <dd className="text-black">{siteConfig.book.isbn}</dd>
+                  <dt className={`font-semibold ${componentUtils.text.secondary}`}>ISBN</dt>
+                  <dd className={componentUtils.text.primary}>{siteConfig.book.isbn}</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-deep-gray">Pages</dt>
-                  <dd className="text-black">240</dd>
+                  <dt className={`font-semibold ${componentUtils.text.secondary}`}>Pages</dt>
+                  <dd className={componentUtils.text.primary}>240</dd>
                 </div>
               </dl>
             </Card>
@@ -130,12 +148,12 @@ export default function BookPage() {
       </Section>
 
       {/* Early Praise */}
-      <Section>
+      <Section className={componentUtils.background.secondary}>
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-serif font-bold text-black sm:text-4xl mb-4">
+          <h2 className={`text-3xl font-serif font-bold sm:text-4xl mb-4 ${componentUtils.text.primary}`}>
             Early Praise
           </h2>
-          <p className="text-lg text-deep-gray max-w-4xl mx-auto">
+          <p className={`text-lg max-w-4xl mx-auto ${componentUtils.text.secondary}`}>
             What readers and critics are saying about this important work.
           </p>
         </div>
@@ -144,16 +162,16 @@ export default function BookPage() {
           {earlyPraise.map((praise, index) => (
             <Card key={index} className="text-center">
               <div className="mb-4">
-                <svg className="w-8 h-8 text-sepia mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-orange mx-auto" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                 </svg>
               </div>
-              <blockquote className="text-deep-gray mb-4 italic">
+              <blockquote className={`mb-4 italic ${componentUtils.text.secondary}`}>
                 &quot;{praise.quote}&quot;
               </blockquote>
               <div>
-                <p className="font-semibold text-black">{praise.author}</p>
-                <p className="text-sm text-deep-gray">{praise.title}</p>
+                <p className={`font-semibold ${componentUtils.text.primary}`}>{praise.author}</p>
+                <p className={`text-sm ${componentUtils.text.light}`}>{praise.title}</p>
               </div>
             </Card>
           ))}
@@ -161,58 +179,43 @@ export default function BookPage() {
       </Section>
 
       {/* Buy Section */}
-      <Section id="buy" className="bg-sepia text-white">
+      <Section id="buy" className={componentUtils.background.accent}>
         <div className="text-center">
-          <h2 className="text-3xl font-serif font-bold sm:text-4xl mb-4">
+          <h2 className={`text-3xl font-serif font-bold sm:text-4xl mb-4 ${componentUtils.text.primary}`}>
             Get Your Copy Today
           </h2>
-          <p className="text-lg text-white/90 max-w-4xl mx-auto mb-8">
+          <p className={`text-lg max-w-4xl mx-auto mb-8 ${componentUtils.text.secondary}`}>
             Available at your favorite booksellers and online retailers.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Card className="bg-white text-black">
+            <Card className="bg-parchment text-black">
               <div className="text-center">
-                <h3 className="text-lg font-serif font-bold mb-2">Amazon</h3>
-                <p className="text-deep-gray mb-4">Available in hardcover, paperback, and e-book</p>
-                <Link
-                  href={siteConfig.book.buyLinks.amazon}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-md bg-sepia px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-sepia/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sepia focus:ring-offset-2"
-                >
+                <h3 className={`text-lg font-serif font-bold mb-2 ${componentUtils.text.primary}`}>Amazon</h3>
+                <p className={`mb-4 ${componentUtils.text.secondary}`}>Available in hardcover, paperback, and e-book</p>
+                <CTAButton variant="secondary" size="sm">
                   Buy on Amazon
-                </Link>
+                </CTAButton>
               </div>
             </Card>
 
-            <Card className="bg-white text-black">
+            <Card className="text-black">
               <div className="text-center">
-                <h3 className="text-lg font-serif font-bold mb-2">Barnes & Noble</h3>
-                <p className="text-deep-gray mb-4">Available in-store and online</p>
-                <Link
-                  href={siteConfig.book.buyLinks.barnesAndNoble}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-md bg-sepia px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-sepia/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sepia focus:ring-offset-2"
-                >
+                <h3 className={`text-lg font-serif font-bold mb-2 ${componentUtils.text.primary}`}>Barnes & Noble</h3>
+                <p className={`mb-4 ${componentUtils.text.secondary}`}>Available in-store and online</p>
+                <CTAButton variant="secondary" size="sm">
                   Buy at B&N
-                </Link>
+                </CTAButton>
               </div>
             </Card>
 
-            <Card className="bg-white text-black">
+            <Card className="bg-parchment text-black">
               <div className="text-center">
-                <h3 className="text-lg font-serif font-bold mb-2">IndieBound</h3>
-                <p className="text-deep-gray mb-4">Support your local bookstore</p>
-                <Link
-                  href={siteConfig.book.buyLinks.indiebound}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-md bg-sepia px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-sepia/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sepia focus:ring-offset-2"
-                >
+                <h3 className={`text-lg font-serif font-bold mb-2 ${componentUtils.text.primary}`}>IndieBound</h3>
+                <p className={`mb-4 ${componentUtils.text.secondary}`}>Support your local bookstore</p>
+                <CTAButton variant="secondary" size="sm">
                   Find Local Store
-                </Link>
+                </CTAButton>
               </div>
             </Card>
           </div>

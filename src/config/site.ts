@@ -1,14 +1,17 @@
 export const siteConfig = {
-  name: "Arthur Myron Horwitz",
+  name: "Arthur M. Horwitz",
   description: "A personal exploration of second-generation trauma and identity. Inheriting history, carrying its echoes.",
   url: "https://arthurmyronhorwitz.com",
   ogImage: "https://arthurmyronhorwitz.com/og.jpg",
   links: {
     twitter: "https://twitter.com/arthurhorwitz",
-    github: "https://github.com/arthurhorwitz",
+    facebook: "https://facebook.com/arthurhorwitz",
+    instagram: "https://instagram.com/arthurhorwitz",
+    linkedin: "https://linkedin.com/in/arthurhorwitz",
+    youtube: "https://youtube.com/@arthurhorwitz",
   },
   book: {
-    title: "Dual Identities: Living in Meir's Shadow",
+    title: "Dual Identities: Living in Meier's Shadow",
     subtitle: "A personal exploration of second-generation trauma and identity",
     isbn: "978-0-000000-0-0",
     publisher: "Independent Publisher",
@@ -25,6 +28,9 @@ export const siteConfig = {
   },
   social: {
     twitter: "@arthurhorwitz",
+    facebook: "arthurhorwitz",
+    instagram: "@arthurhorwitz",
     linkedin: "arthurmyronhorwitz",
+    youtube: "@arthurhorwitz",
   },
 } as const;

@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  /* Custom color palette */
-  --color-black: #0B0B0B;
-  --color-off-white: #FAFAF7;
-  --color-deep-gray: #3A3A3A;
-  --color-sepia: #8A6A44;
-  --color-muted-gold: #C2A46B;
+  /* Historical color palette - Respectful, muted, appropriate for Holocaust memoir */
+  --color-cream: #fef7ed;
+  --color-parchment: #f5f1e8;
+  --color-charcoal: #1a1a1a;
+  --color-slate: #374151;
+  --color-burgundy: #7c2d12;
+  --color-brown: #92400e;
+  --color-amber: #a16207;
+  --color-white: #ffffff;
   
   /* Typography */
   --font-merriweather: var(--font-merriweather);
@@ -15,11 +18,14 @@
 
 @theme inline {
   /* Colors */
-  --color-black: var(--color-black);
-  --color-off-white: var(--color-off-white);
-  --color-deep-gray: var(--color-deep-gray);
-  --color-sepia: var(--color-sepia);
-  --color-muted-gold: var(--color-muted-gold);
+  --color-cream: var(--color-cream);
+  --color-parchment: var(--color-parchment);
+  --color-charcoal: var(--color-charcoal);
+  --color-slate: var(--color-slate);
+  --color-burgundy: var(--color-burgundy);
+  --color-brown: var(--color-brown);
+  --color-amber: var(--color-amber);
+  --color-white: var(--color-white);
   
   /* Typography */
   --font-serif: var(--font-merriweather);
@@ -38,6 +44,7 @@
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 /* Base styles */
@@ -49,8 +56,8 @@ html, body {
 }
 
 body {
-  background: var(--color-off-white);
-  color: var(--color-black);
+  background: var(--color-parchment);
+  color: var(--color-charcoal);
   font-family: var(--font-inter), system-ui, sans-serif;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
@@ -63,6 +70,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-merriweather), serif;
   font-weight: 700;
   line-height: 1.2;
+  color: var(--color-charcoal);
 }
 
 /* Text content */
@@ -97,7 +105,7 @@ p, div, span, li {
 
 /* Focus states for accessibility */
 *:focus {
-  outline: 2px solid var(--color-sepia);
+  outline: 2px solid var(--color-burgundy);
   outline-offset: 2px;
 }
 
@@ -108,7 +116,7 @@ header *:focus,
 }
 
 .skip-to-content:focus {
-  outline: 2px solid var(--color-sepia);
+  outline: 2px solid var(--color-burgundy);
   outline-offset: 2px;
 }
 
@@ -117,11 +125,11 @@ header *:focus,
   position: absolute;
   top: -40px;
   left: 6px;
-  background: var(--color-black);
-  color: var(--color-off-white);
+  background: var(--color-charcoal);
+  color: var(--color-cream);
   padding: 8px 16px;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 8px;
   z-index: 1000;
   transition: top 0.3s;
   opacity: 0;
@@ -134,11 +142,55 @@ header *:focus,
   top: 6px;
   opacity: 1;
   pointer-events: auto;
-  outline: 2px solid var(--color-sepia);
+  outline: 2px solid var(--color-burgundy);
   outline-offset: 2px;
 }
 
-/* Paper grain texture */
-.paper-grain {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+/* Historical gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #7c2d12 0%, #92400e 100%);
+}
+
+.gradient-bg-light {
+  background: linear-gradient(135deg, #fef7ed 0%, #fef3c7 100%);
+}
+
+.gradient-bg-warm {
+  background: linear-gradient(135deg, #fef7ed 0%, #fde68a 100%);
+}
+
+/* Modern card styles with historical colors */
+.modern-card {
+  background: cream;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.3s ease;
+}
+
+.modern-card:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform: translateY(-2px);
+}
+
+/* Modern button styles with historical colors */
+.modern-button {
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.modern-button:hover {
+  transform: translateY(-1px);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(254, 247, 237, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(124, 45, 18, 0.18);
+}
+
+/* Historical texture overlay */
+.historical-texture {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
 }
