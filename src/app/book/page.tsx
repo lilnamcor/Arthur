@@ -8,8 +8,27 @@ import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "About the Book - Dual Identities: Living in Meier's Shadow",
-  description: "Explore the themes, content, and significance of 'Dual Identities: Living in Meier's Shadow' by Arthur M. Horwitz.",
+  title: "Books About the Holocaust | Second Generation Holocaust Books | Dual Identities: Living in Meier's Shadow",
+  description: "Discover one of the most important books about the Holocaust and second generation Holocaust trauma. 'Dual Identities: Living in Meier's Shadow' by Arthur M. Horwitz explores inherited trauma, Holocaust memory, and identity formation for children of survivors. Essential reading for understanding Holocaust impact across generations.",
+  keywords: [
+    "books about the holocaust",
+    "holocaust books",
+    "second generation holocaust books",
+    "books about 2nd generation holocaust", 
+    "holocaust survivor children books",
+    "inherited trauma books",
+    "Dual Identities Living in Meier's Shadow",
+    "Arthur M. Horwitz",
+    "second-generation trauma",
+    "Holocaust memory",
+    "children of holocaust survivors"
+  ],
+  openGraph: {
+    title: "Books About the Holocaust | Second Generation Holocaust Books | Dual Identities: Living in Meier's Shadow",
+    description: "Discover one of the most important books about the Holocaust and second generation Holocaust trauma. Essential reading for understanding Holocaust impact across generations.",
+    type: "website",
+    url: "https://arthurmyronhorwitz.com/book",
+  },
 };
 
 const earlyPraise = [
@@ -33,17 +52,17 @@ export default function BookPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className={`text-4xl font-serif font-bold sm:text-6xl mb-6 ${componentUtils.text.primary}`}>
-              {siteConfig.book.title}
+              Books About the Holocaust: Second Generation Perspective
             </h1>
             <p className={`text-xl mb-6 ${componentUtils.text.secondary}`}>
-              {siteConfig.book.subtitle}
+              {siteConfig.book.subtitle} - One of the most important <strong>books about the Holocaust</strong> and <strong>second generation Holocaust trauma</strong> available today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <CTAButton variant="primary" size="lg">
-                Buy Now
+                Buy This Holocaust Book
               </CTAButton>
               <CTAButton variant="outline" size="lg">
-                Explore Themes
+                Explore Holocaust Themes
               </CTAButton>
             </div>
           </div>
@@ -51,7 +70,7 @@ export default function BookPage() {
             <div className="aspect-[3/4] rounded-2xl border border-brown/20 overflow-hidden shadow-xl bg-parchment">
               <Image
                 src="/book-cover.jpg"
-                alt={siteConfig.book.title + " book cover"}
+                alt="Dual Identities: Living in Meier's Shadow - Book about Holocaust and Second Generation Trauma"
                 width={400}
                 height={533}
                 className="w-full h-full object-cover"
@@ -67,7 +86,7 @@ export default function BookPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h2 className={`text-3xl font-serif font-bold mb-6 ${componentUtils.text.primary}`}>
-              About the Book
+              About This Holocaust Book: Second Generation Trauma
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className={`mb-6 ${componentUtils.text.secondary}`}>
@@ -88,6 +107,10 @@ export default function BookPage() {
 
               <p className={`mb-6 ${componentUtils.text.secondary}`}>
                 But this clipped, iconic Holocaust image discovered in her wallet sleeve isn&apos;t, and there&apos;s no playing along. Insolence is punished with a decree - live two lives, yours and the one Meier never had. Resentment and frustration grow while navigating the real-world challenges of building a life, family and media industry career.
+              </p>
+              
+              <p className={`mb-6 ${componentUtils.text.secondary}`}>
+                This powerful <strong>book about the Holocaust</strong> and <strong>second generation Holocaust trauma</strong> offers readers a unique window into the lasting impact of the Holocaust on families and communities, making it essential reading for anyone seeking to understand the complex legacy of this historical tragedy.
               </p>
             </div>
           </div>

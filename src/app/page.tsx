@@ -5,13 +5,31 @@ import { Card } from "@/components/Card";
 import { CTAButton } from "@/components/CTAButton";
 import { StayConnected } from "@/components/StayConnected";
 import { componentUtils } from "@/lib/design-system";
-import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Arthur M. Horwitz - Dual Identities: Living in Meier's Shadow",
-  description: "A personal exploration of second-generation trauma and identity. Inheriting history, carrying its echoes.",
+  title: "Books About the Holocaust | Second Generation Holocaust Books | Arthur M. Horwitz - Dual Identities: Living in Meier's Shadow",
+  description: "Discover powerful books about the Holocaust and second generation Holocaust trauma. Arthur M. Horwitz's groundbreaking memoir 'Dual Identities: Living in Meier's Shadow' explores inherited trauma, Holocaust memory, and identity formation for children of survivors. Essential reading for understanding Holocaust impact across generations.",
+  keywords: [
+    "books about the holocaust",
+    "holocaust books",
+    "second generation holocaust books", 
+    "books about 2nd generation holocaust",
+    "holocaust survivor children books",
+    "inherited trauma books",
+    "second-generation trauma",
+    "Holocaust memory",
+    "Arthur M. Horwitz",
+    "Dual Identities",
+    "Meier's Shadow"
+  ],
+  openGraph: {
+    title: "Books About the Holocaust | Second Generation Holocaust Books | Arthur M. Horwitz",
+    description: "Discover powerful books about the Holocaust and second generation Holocaust trauma. Essential reading for understanding Holocaust impact across generations.",
+    type: "website",
+    url: "https://arthurmyronhorwitz.com",
+  },
 };
 
 const features = [
@@ -127,20 +145,20 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className={`text-3xl font-serif font-bold sm:text-4xl mb-6 ${componentUtils.text.primary}`}>
-              About the Book
+              Books About the Holocaust: A Second Generation Perspective
             </h2>
             <p className={`text-lg mb-6 ${componentUtils.text.secondary}`}>
-              &quot;Dual Identities: Living in Meier&apos;s Shadow&quot; is a deeply personal exploration of second-generation trauma and the complex journey of identity formation for children of Holocaust survivors. Through vivid, compelling, and honest writing, Arthur M. Horwitz shares his story of growing up with &quot;dual identities&quot; - his own life and the one his uncle Meier never had.
+              &quot;Dual Identities: Living in Meier&apos;s Shadow&quot; is one of the most important <strong>books about the Holocaust</strong> and <strong>second generation Holocaust trauma</strong> available today. This groundbreaking memoir explores the complex journey of identity formation for children of Holocaust survivors, offering a unique perspective on how trauma is inherited and shapes entire families.
             </p>
             <p className={`mb-8 ${componentUtils.text.secondary}`}>
-              This groundbreaking memoir expands the Holocaust memoir genre by giving voice to children of survivors, exploring themes of coping, healing, reconciliation, and remembrance that hold universal appeal.
+              As one of the definitive <strong>books about 2nd generation holocaust</strong> experiences, this work expands the Holocaust memoir genre by giving voice to children of survivors, exploring themes of coping, healing, reconciliation, and remembrance that hold universal appeal for anyone seeking to understand the lasting impact of the Holocaust on families and communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <CTAButton variant="secondary" size="lg">
-                Read More
+                Read More About This Holocaust Book
               </CTAButton>
               <CTAButton variant="outline" size="lg">
-                Buy Now
+                Buy This Second Generation Holocaust Book
               </CTAButton>
             </div>
           </div>
@@ -148,7 +166,7 @@ export default function HomePage() {
             <div className="rounded-2xl border border-brown/20 overflow-hidden shadow-xl bg-parchment">
               <Image
                 src="/book-cover.jpg"
-                alt={siteConfig.book.title + " book cover"}
+                alt="Dual Identities: Living in Meier's Shadow - Book about Holocaust and Second Generation Trauma"
                 width={400}
                 height={533}
                 className="w-full h-auto"

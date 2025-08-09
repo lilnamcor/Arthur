@@ -22,13 +22,22 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "books-about-holocaust-second-generation",
+    title: "Books About the Holocaust: A Comprehensive Guide to Second Generation Trauma",
+    excerpt: "Discover the most important books about the Holocaust and second generation Holocaust books that explore inherited trauma, Holocaust memory, and identity formation for children of survivors.",
+    category: "Second-Generation Trauma",
+    date: "December 20, 2024",
+    readTime: "12 min read",
+    featured: true,
+  },
+  {
     slug: "understanding-second-generation-trauma",
     title: "Understanding Second-Generation Trauma: A Personal Journey",
     excerpt: "Exploring how trauma is inherited and its profound impact on identity formation for children of survivors.",
     category: "Second-Generation Trauma",
     date: "December 15, 2024",
     readTime: "8 min read",
-    featured: true,
+    featured: false,
   },
   {
     slug: "memory-identity-formation",

@@ -19,6 +19,7 @@ const mainNavigation = [
 const aboutDropdown = [
   { name: "Author", href: "/author", description: "Learn about Arthur M. Horwitz" },
   { name: "Book", href: "/book", description: "Discover the story behind the book" },
+  { name: "Second Generation", href: "/second-generation", description: "Understanding second-generation Holocaust survivors and inherited trauma" },
   { name: "Themes", href: "/themes", description: "Explore key themes" },
 ];
 
