@@ -92,12 +92,16 @@ export default function EventsPage() {
             Interested in having Arthur speak at your event, institution, or community gathering? We&apos;d love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton variant="primary" size="lg">
-              Contact Arthur
-            </CTAButton>
-            <CTAButton variant="outline" size="lg">
-              Media Inquiries
-            </CTAButton>
+            <Link href="/contact">
+              <CTAButton variant="secondary" size="lg">
+                Contact Arthur
+              </CTAButton>
+            </Link>
+            <Link href="/press">
+              <CTAButton variant="outline" size="lg">
+                Media Inquiries
+              </CTAButton>
+            </Link>
           </div>
         </div>
       </Section>
@@ -255,12 +259,16 @@ export default function EventsPage() {
             Interested in booking Arthur for a speaking engagement or have questions about upcoming events?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton variant="secondary" size="lg">
-              Contact Arthur
-            </CTAButton>
-            <CTAButton variant="outline" size="lg">
-              Media Inquiries
-            </CTAButton>
+            <Link href="/contact">
+              <CTAButton variant="secondary" size="lg">
+                Contact Arthur
+              </CTAButton>
+            </Link>
+            <Link href="/press">
+              <CTAButton variant="outline" size="lg">
+                Media Inquiries
+              </CTAButton>
+            </Link>
           </div>
         </div>
       </Section>

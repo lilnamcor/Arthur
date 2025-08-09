@@ -83,7 +83,7 @@ export default function PressPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pressCoverage.map((article, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-200">
+            <Card key={index} className="hover:shadow-lg transition-shadow duration-200" href={article.link}>
               <div className="flex items-center gap-2 mb-3">
                 <span className={`px-3 py-1 rounded-full text-sm font-medium bg-burgundy/10 text-burgundy`}>
                   {article.publication}
@@ -96,12 +96,9 @@ export default function PressPage() {
               <p className={`mb-4 ${componentUtils.text.secondary}`}>
                 {article.excerpt}
               </p>
-              <Link
-                href={article.link}
-                className={`inline-flex items-center justify-center rounded-lg border border-burgundy px-4 py-2 text-sm font-medium text-burgundy shadow-sm hover:bg-burgundy hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-burgundy focus:ring-offset-2`}
-              >
+              <div className={`inline-flex items-center justify-center rounded-lg border border-burgundy px-4 py-2 text-sm font-medium text-burgundy shadow-sm group-hover:bg-burgundy group-hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-burgundy focus:ring-offset-2`}>
                 Read Article
-              </Link>
+              </div>
             </Card>
           ))}
         </div>
@@ -176,12 +173,16 @@ export default function PressPage() {
             For media interviews, speaking engagements, or additional press materials, please get in touch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton variant="secondary" size="lg">
-              Contact Arthur
-            </CTAButton>
-            <CTAButton variant="outline" size="lg">
-              View Events
-            </CTAButton>
+            <Link href="/contact">
+              <CTAButton variant="secondary" size="lg">
+                Contact Arthur
+              </CTAButton>
+            </Link>
+            <Link href="/events">
+              <CTAButton variant="outline" size="lg">
+                View Events
+              </CTAButton>
+            </Link>
           </div>
         </div>
       </Section>

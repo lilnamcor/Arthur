@@ -167,7 +167,7 @@ export default function ContactPage() {
             </h2>
             
             <div className="space-y-6">
-              <Card>
+              <Card className="cursor-pointer hover:shadow-lg transition-shadow duration-200" href="mailto:arthur@arthurmyronhorwitz.com">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <IconContainer size="md" variant="hover">
@@ -178,19 +178,14 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className={`text-lg font-serif font-bold mb-1 ${componentUtils.text.primary}`}>Email</h3>
-                    <p className={componentUtils.text.secondary}>
-                      <a 
-                        href="mailto:arthur@arthurmyronhorwitz.com"
-                        className={`hover:text-burgundy transition-colors duration-200 ${componentUtils.text.secondary}`}
-                      >
-                        arthur@arthurmyronhorwitz.com
-                      </a>
+                    <p className={`${componentUtils.text.secondary} group-hover:text-burgundy transition-colors duration-200`}>
+                      arthur@arthurmyronhorwitz.com
                     </p>
                   </div>
                 </div>
               </Card>
 
-              <Card>
+              <Card className="cursor-pointer hover:shadow-lg transition-shadow duration-200" href="tel:+1-555-000-0000">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <IconContainer size="md" variant="hover">
@@ -201,13 +196,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className={`text-lg font-serif font-bold mb-1 ${componentUtils.text.primary}`}>Phone</h3>
-                    <p className={componentUtils.text.secondary}>
-                      <a 
-                        href="tel:+1-555-000-0000"
-                        className={`hover:text-burgundy transition-colors duration-200 ${componentUtils.text.secondary}`}
-                      >
-                        +1 (555) 000-0000
-                      </a>
+                    <p className={`${componentUtils.text.secondary} group-hover:text-burgundy transition-colors duration-200`}>
+                      +1 (555) 000-0000
                     </p>
                   </div>
                 </div>

@@ -43,7 +43,7 @@ export function SiteFooter() {
         <div className="mt-6 flex justify-center">
           <div className="text-center">
             <p className={`text-sm text-gray-400 mb-2`}>Follow Arthur on social media</p>
-            <SocialMediaLinks size="md" className="justify-center" />
+            <SocialMediaLinks size="md" className="justify-center" variant="footer" />
           </div>
         </div>
         

@@ -1,6 +1,7 @@
 import { Section } from "@/components/Section";
 import { CTAButton } from "@/components/CTAButton";
 import { componentUtils } from "@/lib/design-system";
+import Link from "next/link";
 
 interface StayConnectedProps {
   title?: string;
@@ -44,12 +45,16 @@ export function StayConnected({
         )}
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <CTAButton variant="secondary" size="lg">
-            View Events
-          </CTAButton>
-          <CTAButton variant="outline" size="lg">
-            Get in Touch
-          </CTAButton>
+          <Link href="/events">
+            <CTAButton variant="secondary" size="lg">
+              View Events
+            </CTAButton>
+          </Link>
+          <Link href="/contact">
+            <CTAButton variant="outline" size="lg">
+              Get in Touch
+            </CTAButton>
+          </Link>
         </div>
       </div>
     </Section>

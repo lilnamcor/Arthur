@@ -101,7 +101,7 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
-            <Card key={feature.title} className="group">
+            <Card key={feature.title} className="group" href={feature.href}>
               <div className={`flex items-center justify-center w-12 h-12 rounded-xl bg-burgundy/10 text-burgundy mb-4 group-hover:bg-burgundy group-hover:text-white transition-colors duration-200`}>
                 {feature.icon}
               </div>
@@ -111,15 +111,12 @@ export default function HomePage() {
               <p className={`mb-4 ${componentUtils.text.secondary}`}>
                 {feature.description}
               </p>
-              <Link
-                href={feature.href}
-                className={`inline-flex items-center font-medium transition-colors duration-200 ${componentUtils.text.accent} hover:text-burgundy/80`}
-              >
+              <div className={`inline-flex items-center font-medium transition-colors duration-200 ${componentUtils.text.accent} group-hover:text-burgundy/80`}>
                 Learn more
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </div>
             </Card>
           ))}
         </div>
