@@ -1,35 +1,32 @@
 import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/lib/design-system";
 
 interface CTAButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
 }
 
 const CTAButton = forwardRef<HTMLButtonElement, CTAButtonProps>(
   ({ className, variant = "primary", size = "md", ...props }, ref) => {
-    const baseStyles = "inline-flex items-center justify-center rounded-md font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
-    
-    const variants = {
-      primary: "bg-sepia text-white shadow-sm hover:bg-sepia/90 focus:ring-sepia",
-      secondary: "bg-deep-gray text-off-white shadow-sm hover:bg-deep-gray/90 focus:ring-deep-gray",
-      outline: "border border-deep-gray text-deep-gray shadow-sm hover:bg-deep-gray hover:text-off-white focus:ring-deep-gray",
-    };
-    
-    const sizes = {
-      sm: "px-4 py-2 text-sm",
-      md: "px-6 py-3 text-base",
-      lg: "px-8 py-4 text-lg",
+    const getVariantClasses = () => {
+      switch (variant) {
+        case "primary":
+          return `${buttonVariants.primary.base} ${buttonVariants.primary.colors} ${buttonVariants.primary.sizes[size]}`;
+        case "secondary":
+          return `${buttonVariants.secondary.base} ${buttonVariants.secondary.colors} ${buttonVariants.secondary.sizes[size]}`;
+        case "outline":
+          return `${buttonVariants.outline.base} ${buttonVariants.outline.colors} ${buttonVariants.outline.sizes[size]}`;
+        case "ghost":
+          return `${buttonVariants.ghost.base} ${buttonVariants.ghost.colors} ${buttonVariants.ghost.sizes[size]}`;
+        default:
+          return `${buttonVariants.primary.base} ${buttonVariants.primary.colors} ${buttonVariants.primary.sizes[size]}`;
+      }
     };
 
     return (
       <button
-        className={cn(
-          baseStyles,
-          variants[variant],
-          sizes[size],
-          className
-        )}
+        className={cn(getVariantClasses(), "modern-button", className)}
         ref={ref}
         {...props}
       />

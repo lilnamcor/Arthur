@@ -2,6 +2,9 @@ import { Metadata } from "next";
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
+import { CTAButton } from "@/components/CTAButton";
+import { StayConnected } from "@/components/StayConnected";
+import { componentUtils } from "@/lib/design-system";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
@@ -86,12 +89,12 @@ export default function HomePage() {
       <Hero />
 
       {/* Features Section */}
-      <Section id="main-content">
+      <Section id="main-content" className={componentUtils.background.primary}>
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-serif font-bold text-black sm:text-4xl">
+          <h2 className={`text-3xl font-serif font-bold sm:text-4xl ${componentUtils.text.primary}`}>
             Explore the Journey
           </h2>
-          <p className="mt-4 text-lg text-deep-gray max-w-4xl mx-auto">
+          <p className={`mt-4 text-lg max-w-4xl mx-auto ${componentUtils.text.secondary}`}>
             Discover the profound themes and personal stories that shape this important work.
           </p>
         </div>
@@ -99,18 +102,18 @@ export default function HomePage() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <Card key={feature.title} className="group">
-              <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-sepia/10 text-sepia mb-4 group-hover:bg-sepia group-hover:text-white transition-colors duration-200">
+              <div className={`flex items-center justify-center w-12 h-12 rounded-xl bg-burgundy/10 text-burgundy mb-4 group-hover:bg-burgundy group-hover:text-white transition-colors duration-200`}>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-serif font-bold text-black mb-2">
+              <h3 className={`text-xl font-serif font-bold mb-2 ${componentUtils.text.primary}`}>
                 {feature.title}
               </h3>
-              <p className="text-deep-gray mb-4">
+              <p className={`mb-4 ${componentUtils.text.secondary}`}>
                 {feature.description}
               </p>
               <Link
                 href={feature.href}
-                className="inline-flex items-center text-sepia hover:text-sepia/80 font-medium transition-colors duration-200"
+                className={`inline-flex items-center font-medium transition-colors duration-200 ${componentUtils.text.accent} hover:text-burgundy/80`}
               >
                 Learn more
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -123,35 +126,29 @@ export default function HomePage() {
       </Section>
 
       {/* About Preview Section */}
-      <Section className="bg-deep-gray/5">
+      <Section className={componentUtils.background.accent}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-serif font-bold text-black sm:text-4xl mb-6">
+            <h2 className={`text-3xl font-serif font-bold sm:text-4xl mb-6 ${componentUtils.text.primary}`}>
               About the Book
             </h2>
-            <p className="text-lg text-deep-gray mb-6">
+            <p className={`text-lg mb-6 ${componentUtils.text.secondary}`}>
               &quot;Dual Identities: Living in Meier&apos;s Shadow&quot; is a deeply personal exploration of second-generation trauma and the complex journey of identity formation for children of Holocaust survivors. Through vivid, compelling, and honest writing, Arthur M. Horwitz shares his story of growing up with &quot;dual identities&quot; - his own life and the one his uncle Meier never had.
             </p>
-            <p className="text-deep-gray mb-8">
+            <p className={`mb-8 ${componentUtils.text.secondary}`}>
               This groundbreaking memoir expands the Holocaust memoir genre by giving voice to children of survivors, exploring themes of coping, healing, reconciliation, and remembrance that hold universal appeal.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/book"
-                className="inline-flex items-center justify-center rounded-md bg-sepia px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-sepia/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sepia focus:ring-offset-2"
-              >
+              <CTAButton variant="secondary" size="lg">
                 Read More
-              </Link>
-              <Link
-                href="/book#buy"
-                className="inline-flex items-center justify-center rounded-md border border-deep-gray px-6 py-3 text-base font-medium text-deep-gray shadow-sm hover:bg-deep-gray hover:text-off-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-deep-gray focus:ring-offset-2"
-              >
+              </CTAButton>
+              <CTAButton variant="outline" size="lg">
                 Buy Now
-              </Link>
+              </CTAButton>
             </div>
           </div>
           <div className="relative">
-            <div className="rounded-lg border border-deep-gray/20 overflow-hidden shadow-2xl">
+            <div className="rounded-2xl border border-brown/20 overflow-hidden shadow-xl bg-parchment">
               <Image
                 src="/book-cover.jpg"
                 alt={siteConfig.book.title + " book cover"}
@@ -164,31 +161,8 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* CTA Section */}
-      <Section className="bg-sepia text-white">
-        <div className="text-center">
-          <h2 className="text-3xl font-serif font-bold sm:text-4xl mb-4">
-            Join the Conversation
-          </h2>
-          <p className="text-lg text-white/90 max-w-4xl mx-auto mb-8">
-            Connect with Arthur for speaking engagements, book discussions, or to share your own story of second-generation trauma and identity.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/events"
-              className="inline-flex items-center justify-center rounded-md bg-deep-gray px-6 py-3 text-base font-medium text-off-white shadow-sm hover:bg-deep-gray/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-deep-gray focus:ring-offset-2"
-            >
-              View Events
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-md border border-white px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-white hover:text-sepia transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-            >
-              Get in Touch
-            </Link>
-          </div>
-        </div>
-      </Section>
+      {/* Stay Connected Section */}
+      <StayConnected />
     </main>
   );
 }

@@ -17,24 +17,46 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Arthur Myron Horwitz - Dual Identities: Living in Meir's Shadow",
-  description: "A personal exploration of second-generation trauma and identity. Inheriting history, carrying its echoes.",
-  keywords: ["Holocaust", "second generation", "trauma", "identity", "memory", "Arthur Myron Horwitz"],
-  authors: [{ name: "Arthur Myron Horwitz" }],
+  title: "Arthur M. Horwitz - Dual Identities: Living in Meier's Shadow | Second-Generation Trauma, Holocaust Memory, Identity",
+  description: "A personal exploration of second-generation trauma and identity. Inheriting history, carrying its echoes. Discover Arthur M. Horwitz's groundbreaking memoir about Holocaust memory, inherited trauma, and the journey of healing and understanding.",
+  keywords: [
+    "second-generation trauma",
+    "Holocaust memory", 
+    "inherited trauma",
+    "identity formation",
+    "Arthur M. Horwitz",
+    "Dual Identities",
+    "Meier's Shadow",
+    "Holocaust survivor children",
+    "trauma healing",
+    "memory and identity",
+    "Jewish history",
+    "resilience",
+    "healing journey",
+    "family legacy",
+    "historical trauma"
+  ],
+  authors: [{ name: "Arthur M. Horwitz" }],
   openGraph: {
-    title: "Arthur Myron Horwitz - Dual Identities: Living in Meir's Shadow",
+    title: "Arthur M. Horwitz - Dual Identities: Living in Meier's Shadow",
     description: "A personal exploration of second-generation trauma and identity. Inheriting history, carrying its echoes.",
     type: "website",
     locale: "en_US",
+    url: "https://arthurmyronhorwitz.com",
+    siteName: "Arthur M. Horwitz",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arthur Myron Horwitz - Dual Identities: Living in Meir's Shadow",
+    title: "Arthur M. Horwitz - Dual Identities: Living in Meier's Shadow",
     description: "A personal exploration of second-generation trauma and identity. Inheriting history, carrying its echoes.",
+    creator: "@arthurhorwitz",
   },
   robots: {
     index: true,
     follow: true,
+  },
+  alternates: {
+    canonical: "https://arthurmyronhorwitz.com",
   },
 };
 
@@ -45,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${merriweather.variable} ${inter.variable}`}>
-      <body className="font-sans antialiased bg-off-white text-black">
+      <body className="font-sans antialiased bg-parchment text-charcoal">
         <SiteHeader />
         {children}
         <SiteFooter />

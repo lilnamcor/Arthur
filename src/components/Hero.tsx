@@ -4,11 +4,15 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
+import { SocialMediaLinks } from "@/components/SocialMediaLinks";
+import { CTAButton } from "@/components/CTAButton";
+import { componentUtils } from "@/lib/design-system";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-off-white paper-grain overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-off-white/50" />
+    <section className={`relative min-h-screen flex items-center justify-center overflow-hidden ${componentUtils.background.primary}`}>
+      {/* Historical gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-cream via-white to-gray-100 historical-texture" />
       
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
@@ -23,7 +27,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl font-serif font-bold tracking-tight text-black sm:text-6xl"
+              className={`text-4xl font-serif font-bold tracking-tight sm:text-6xl ${componentUtils.text.primary}`}
             >
               Inheriting history, carrying its echoes.
             </motion.h1>
@@ -32,7 +36,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-6 text-lg leading-8 text-deep-gray max-w-4xl mx-auto lg:mx-0"
+              className={`mt-6 text-lg leading-8 max-w-4xl mx-auto lg:mx-0 ${componentUtils.text.secondary}`}
             >
               A personal exploration of second-generation trauma and identity.
             </motion.p>
@@ -43,18 +47,25 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Link
-                href="/book"
-                className="inline-flex items-center justify-center rounded-md bg-sepia px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-sepia/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sepia focus:ring-offset-2"
-              >
+              <CTAButton variant="primary" size="lg" className="transform hover:scale-105">
+                Buy the Book Now
+              </CTAButton>
+              <CTAButton variant="outline" size="lg">
                 Learn More
-              </Link>
-              <Link
-                href="/book#buy"
-                className="inline-flex items-center justify-center rounded-md border border-deep-gray px-6 py-3 text-base font-medium text-deep-gray shadow-sm hover:bg-deep-gray hover:text-off-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-deep-gray focus:ring-offset-2"
-              >
-                Pre-Order / Buy
-              </Link>
+              </CTAButton>
+            </motion.div>
+
+            {/* Social Media Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="mt-8 flex justify-center lg:justify-start"
+            >
+              <div className="text-center lg:text-left">
+                <p className={`text-sm mb-3 ${componentUtils.text.secondary}`}>Follow Arthur on social media</p>
+                <SocialMediaLinks size="sm" />
+              </div>
             </motion.div>
           </motion.div>
 
@@ -67,7 +78,7 @@ export function Hero() {
           >
             <div className="relative w-80 h-96 lg:w-96 lg:h-[500px] shadow-2xl">
               {/* Book cover image */}
-              <div className="absolute inset-0 rounded-lg border border-deep-gray/20 overflow-hidden">
+              <div className="absolute inset-0 rounded-2xl border border-brown/20 overflow-hidden bg-parchment shadow-xl">
                 <Image
                   src="/book-cover.jpg"
                   alt={siteConfig.book.title + " book cover"}
@@ -78,8 +89,8 @@ export function Hero() {
                 />
               </div>
               
-              {/* Book spine effect */}
-              <div className="absolute -right-2 top-0 bottom-0 w-4 bg-gradient-to-b from-sepia to-muted-gold rounded-r-lg shadow-lg" />
+              {/* Historical book spine effect */}
+              <div className="absolute -right-2 top-0 bottom-0 w-4 bg-gradient-to-b from-burgundy to-brown rounded-r-xl shadow-lg" />
             </div>
           </motion.div>
         </div>

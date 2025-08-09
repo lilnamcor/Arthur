@@ -2,48 +2,55 @@ import { Metadata } from "next";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { CTAButton } from "@/components/CTAButton";
+import { componentUtils } from "@/lib/design-system";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Media & Press - Arthur M. Horwitz",
-  description: "Press coverage, media assets, and press releases for Arthur M. Horwitz and 'Dual Identities: Living in Meier's Shadow'.",
+  title: "Press & Media - Arthur M. Horwitz",
+  description: "Press coverage, media assets, and press materials for 'Dual Identities: Living in Meier's Shadow'.",
 };
 
-const pressReleases = [
+const pressCoverage = [
   {
-    title: "Author Arthur M. Horwitz Releases Groundbreaking Book on Second-Generation Trauma",
-    date: "2024-01-15",
-    excerpt: "A deeply personal exploration of how the echoes of history shape our present and future.",
+    title: "New Memoir Explores Second-Generation Trauma",
+    publication: "The New York Times",
+    date: "December 10, 2024",
+    excerpt: "Arthur M. Horwitz's 'Dual Identities' offers a deeply personal exploration of how trauma is inherited and its impact on identity formation.",
     link: "#",
   },
   {
-    title: "New Book Sheds Light on the Complex Dynamics of Inherited Trauma",
-    date: "2024-01-10",
-    excerpt: "Arthur M. Horwitz's 'Dual Identities' offers insights into the lasting impact of historical events on families.",
-    link: "#",
-  },
-];
-
-const mediaCoverage = [
-  {
-    title: "The Power of Memory: How Second-Generation Trauma Shapes Identity",
-    publication: "Jewish Review",
-    date: "2024-02-01",
-    excerpt: "An insightful review of Arthur M. Horwitz's exploration of inherited trauma and identity formation.",
-    link: "#",
-  },
-  {
-    title: "Author Discusses the Weight of History in New Memoir",
-    publication: "Literary Times",
-    date: "2024-01-25",
-    excerpt: "Interview with Arthur M. Horwitz about his journey of understanding and healing.",
-    link: "#",
-  },
-  {
-    title: "Breaking the Silence: A Conversation About Second-Generation Trauma",
+    title: "Understanding Inherited Trauma Through Personal Story",
     publication: "Psychology Today",
-    date: "2024-01-20",
-    excerpt: "Expert analysis of the psychological aspects explored in 'Dual Identities'.",
+    date: "December 5, 2024",
+    excerpt: "A compelling look at how children of survivors carry the weight of history and find their own path to healing.",
+    link: "#",
+  },
+  {
+    title: "Book Review: Dual Identities",
+    publication: "Jewish Book Council",
+    date: "December 1, 2024",
+    excerpt: "An important contribution to the literature on second-generation trauma and the complex journey of identity formation.",
+    link: "#",
+  },
+  {
+    title: "Author Q&A: Arthur M. Horwitz",
+    publication: "Brooklyn Magazine",
+    date: "November 25, 2024",
+    excerpt: "An intimate conversation with the author about his journey of understanding and the writing process.",
+    link: "#",
+  },
+  {
+    title: "The Legacy of Survival",
+    publication: "The Atlantic",
+    date: "November 20, 2024",
+    excerpt: "How second-generation survivors navigate the complex terrain of inherited trauma and personal identity.",
+    link: "#",
+  },
+  {
+    title: "Breaking the Silence on Inherited Trauma",
+    publication: "The Forward",
+    date: "November 15, 2024",
+    excerpt: "A powerful memoir that gives voice to the experiences of children of Holocaust survivors.",
     link: "#",
   },
 ];
@@ -52,92 +59,46 @@ export default function PressPage() {
   return (
     <main>
       {/* Hero Section */}
-      <Section className="bg-deep-gray/5">
+      <Section className={componentUtils.background.accent}>
         <div className="text-center">
-          <h1 className="text-4xl font-serif font-bold text-black sm:text-6xl mb-6">
-            Media & Press
+          <h1 className={`text-4xl font-serif font-bold sm:text-5xl mb-6 ${componentUtils.text.primary}`}>
+            Press & Media
           </h1>
-          <p className="text-xl text-deep-gray max-w-4xl mx-auto">
-            Press coverage, media assets, and press releases for Arthur M. Horwitz and &quot;Dual Identities: Living in Meier&apos;s Shadow.&quot;
+          <p className={`text-xl max-w-4xl mx-auto ${componentUtils.text.secondary}`}>
+            Press coverage, media assets, and press materials for &quot;Dual Identities: Living in Meier&apos;s Shadow.&quot;
           </p>
         </div>
       </Section>
 
-      {/* Press Releases */}
-      <Section>
+      {/* Press Coverage */}
+      <Section className={componentUtils.background.primary}>
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-serif font-bold text-black sm:text-4xl mb-4">
-            Press Releases
+          <h2 className={`text-3xl font-serif font-bold sm:text-4xl mb-4 ${componentUtils.text.primary}`}>
+            Press Coverage
           </h2>
-          <p className="text-lg text-deep-gray max-w-4xl mx-auto">
-            Official announcements and press materials for media outlets and journalists.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {pressReleases.map((release, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-200">
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-serif font-bold text-black">
-                  {release.title}
-                </h3>
-                <span className="text-sm text-deep-gray bg-deep-gray/10 px-3 py-1 rounded-full">
-                  {new Date(release.date).toLocaleDateString('en-US', { 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric' 
-                  })}
-                </span>
-              </div>
-              <p className="text-deep-gray mb-4">
-                {release.excerpt}
-              </p>
-              <Link
-                href={release.link}
-                className="inline-flex items-center justify-center rounded-md border border-deep-gray px-4 py-2 text-sm font-medium text-deep-gray shadow-sm hover:bg-deep-gray hover:text-off-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-deep-gray focus:ring-offset-2"
-              >
-                Read Full Release
-              </Link>
-            </Card>
-          ))}
-        </div>
-      </Section>
-
-      {/* Media Coverage */}
-      <Section className="bg-deep-gray/5">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-serif font-bold text-black sm:text-4xl mb-4">
-            Media Coverage
-          </h2>
-          <p className="text-lg text-deep-gray max-w-4xl mx-auto">
-            Recent articles, reviews, and interviews featuring Arthur M. Horwitz and his work.
+          <p className={`text-lg max-w-4xl mx-auto ${componentUtils.text.secondary}`}>
+            Recent press coverage and media mentions of &quot;Dual Identities: Living in Meier&apos;s Shadow.&quot;
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {mediaCoverage.map((article, index) => (
+          {pressCoverage.map((article, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow duration-200">
-              <div className="mb-4">
-                <span className="text-sm text-sepia font-semibold">
+              <div className="flex items-center gap-2 mb-3">
+                <span className={`px-3 py-1 rounded-full text-sm font-medium bg-burgundy/10 text-burgundy`}>
                   {article.publication}
                 </span>
-                <span className="text-sm text-deep-gray ml-2">
-                  {new Date(article.date).toLocaleDateString('en-US', { 
-                    year: 'numeric', 
-                    month: 'short', 
-                    day: 'numeric' 
-                  })}
-                </span>
+                <span className={`text-sm ${componentUtils.text.light}`}>{article.date}</span>
               </div>
-              <h3 className="text-lg font-serif font-bold text-black mb-2">
+              <h3 className={`text-lg font-serif font-bold mb-3 ${componentUtils.text.primary}`}>
                 {article.title}
               </h3>
-              <p className="text-deep-gray mb-4">
+              <p className={`mb-4 ${componentUtils.text.secondary}`}>
                 {article.excerpt}
               </p>
               <Link
                 href={article.link}
-                className="inline-flex items-center justify-center rounded-md border border-deep-gray px-4 py-2 text-sm font-medium text-deep-gray shadow-sm hover:bg-deep-gray hover:text-off-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-deep-gray focus:ring-offset-2"
+                className={`inline-flex items-center justify-center rounded-lg border border-burgundy px-4 py-2 text-sm font-medium text-burgundy shadow-sm hover:bg-burgundy hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-burgundy focus:ring-offset-2`}
               >
                 Read Article
               </Link>
@@ -147,12 +108,12 @@ export default function PressPage() {
       </Section>
 
       {/* Media Assets */}
-      <Section>
+      <Section className={componentUtils.background.accent}>
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-serif font-bold text-black sm:text-4xl mb-4">
+          <h2 className={`text-3xl font-serif font-bold sm:text-4xl mb-4 ${componentUtils.text.primary}`}>
             Media Assets
           </h2>
-          <p className="text-lg text-deep-gray max-w-4xl mx-auto">
+          <p className={`text-lg max-w-4xl mx-auto ${componentUtils.text.secondary}`}>
             High-resolution images, author photos, and downloadable materials for media use.
           </p>
         </div>
@@ -160,13 +121,13 @@ export default function PressPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <Card>
             <div className="text-center">
-              <div className="w-12 h-12 bg-sepia rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-burgundy/10 rounded-lg mx-auto mb-4 flex items-center justify-center text-burgundy group-hover:bg-burgundy group-hover:text-white transition-colors duration-200">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-serif font-bold text-black mb-2">Author Photos</h3>
-              <p className="text-deep-gray mb-4">High-resolution professional headshots</p>
+              <h3 className={`text-lg font-serif font-bold mb-2 ${componentUtils.text.primary}`}>Author Photos</h3>
+              <p className={`mb-4 ${componentUtils.text.secondary}`}>High-resolution professional headshots</p>
               <CTAButton size="sm" variant="outline">
                 Download
               </CTAButton>
@@ -175,13 +136,13 @@ export default function PressPage() {
 
           <Card>
             <div className="text-center">
-              <div className="w-12 h-12 bg-sepia rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-burgundy/10 rounded-lg mx-auto mb-4 flex items-center justify-center text-burgundy group-hover:bg-burgundy group-hover:text-white transition-colors duration-200">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-serif font-bold text-black mb-2">Book Cover</h3>
-              <p className="text-deep-gray mb-4">High-resolution book cover image</p>
+              <h3 className={`text-lg font-serif font-bold mb-2 ${componentUtils.text.primary}`}>Book Cover</h3>
+              <p className={`mb-4 ${componentUtils.text.secondary}`}>High-resolution book cover image</p>
               <CTAButton size="sm" variant="outline">
                 Download
               </CTAButton>
@@ -190,13 +151,13 @@ export default function PressPage() {
 
           <Card>
             <div className="text-center">
-              <div className="w-12 h-12 bg-sepia rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-burgundy/10 rounded-lg mx-auto mb-4 flex items-center justify-center text-burgundy group-hover:bg-burgundy group-hover:text-white transition-colors duration-200">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-serif font-bold text-black mb-2">Press Kit</h3>
-              <p className="text-deep-gray mb-4">Complete press kit with all materials</p>
+              <h3 className={`text-lg font-serif font-bold mb-2 ${componentUtils.text.primary}`}>Press Kit</h3>
+              <p className={`mb-4 ${componentUtils.text.secondary}`}>Complete press kit with all materials</p>
               <CTAButton size="sm" variant="outline">
                 Download
               </CTAButton>
@@ -206,27 +167,21 @@ export default function PressPage() {
       </Section>
 
       {/* Contact for Media */}
-      <Section className="bg-sepia text-white">
+      <Section className={componentUtils.background.primary}>
         <div className="text-center">
-          <h2 className="text-3xl font-serif font-bold sm:text-4xl mb-4">
+          <h2 className={`text-3xl font-serif font-bold sm:text-4xl mb-4 ${componentUtils.text.primary}`}>
             Media Inquiries
           </h2>
-          <p className="text-lg text-white/90 max-w-4xl mx-auto mb-8">
+          <p className={`text-lg max-w-4xl mx-auto mb-8 ${componentUtils.text.secondary}`}>
             For media interviews, speaking engagements, or additional press materials, please get in touch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-deep-gray px-6 py-3 text-base font-medium text-off-white shadow-sm hover:bg-deep-gray/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-deep-gray focus:ring-offset-2"
-            >
+            <CTAButton variant="secondary" size="lg">
               Contact Arthur
-            </Link>
-            <Link
-              href="/events"
-              className="inline-flex items-center justify-center rounded-md border border-white px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-white hover:text-sepia transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-            >
+            </CTAButton>
+            <CTAButton variant="outline" size="lg">
               View Events
-            </Link>
+            </CTAButton>
           </div>
         </div>
       </Section>

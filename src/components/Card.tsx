@@ -1,26 +1,13 @@
 import { cn } from "@/lib/utils";
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
-  className?: string;
-  as?: "div" | "article" | "section";
-}
-
-export function Card({ 
-  children, 
-  className, 
-  as: Component = "div",
-  ...props 
-}: CardProps) {
+export function Card({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <Component
+    <div
       className={cn(
-        "bg-white rounded-lg shadow-md border border-deep-gray/10 p-6 hover:shadow-lg transition-shadow duration-200",
+        "modern-card bg-parchment border border-brown/20 shadow-sm hover:shadow-md transition-all duration-200 rounded-xl p-6 group",
         className
       )}
       {...props}
-    >
-      {children}
-    </Component>
+    />
   );
 }
