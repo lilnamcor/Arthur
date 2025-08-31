@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Arthur M. Horwitz",
+  name: "Arthur Myron Horwitz",
   description: "A personal exploration of second-generation trauma and identity. Inheriting history, carrying its echoes.",
   url: "https://arthurmyronhorwitz.com",
   ogImage: "https://arthurmyronhorwitz.com/og.jpg",

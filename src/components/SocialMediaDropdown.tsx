@@ -64,16 +64,15 @@ export function SocialMediaDropdown() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex cursor-pointer items-center justify-center px-3 py-1.5 rounded-lg bg-transparent text-slate hover:bg-burgundy/10 hover:text-burgundy transition-all duration-200 border border-slate/20 hover:border-burgundy/30 focus:outline-none focus:ring-2 focus:ring-burgundy/50 text-sm font-medium"
+        className="flex cursor-pointer items-center justify-center w-10 h-10 rounded-lg bg-transparent text-slate hover:bg-burgundy/10 hover:text-burgundy transition-all duration-200 border border-slate/20 hover:border-burgundy/30 focus:outline-none focus:ring-2 focus:ring-burgundy/50"
         aria-label="Social media links"
         aria-expanded={isOpen}
       >
-        <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
         </svg>
-        Follow
         <svg 
-          className={`ml-1 h-3 w-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
+          className={`absolute -bottom-1 -right-1 h-3 w-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24"

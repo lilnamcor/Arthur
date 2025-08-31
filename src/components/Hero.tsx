@@ -47,7 +47,7 @@ export function Hero() {
               className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <CTAButton variant="primary" size="lg">
-                Buy the Book Now
+                {new Date() < new Date('2026-05-19') ? 'Pre-Order Now' : 'Buy Now'}
               </CTAButton>
               <CTAButton variant="outline" size="lg">
                 Learn More
@@ -62,8 +62,7 @@ export function Hero() {
               className="mt-8 flex justify-center lg:justify-start"
             >
               <div className="text-center lg:text-left">
-                <p className={`text-sm mb-3 ${componentUtils.text.secondary}`}>Follow Arthur on social media</p>
-                <SocialMediaLinks size="sm" />
+                <SocialMediaLinks size="md" />
               </div>
             </motion.div>
           </motion.div>

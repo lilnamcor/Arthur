@@ -5,28 +5,17 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import { SocialMediaLinks } from "@/components/SocialMediaLinks";
-import { SocialMediaDropdown } from "@/components/SocialMediaDropdown";
-import { NavigationDropdown } from "@/components/NavigationDropdown";
 import { componentUtils } from "@/lib/design-system";
 
 // Main navigation items (always visible)
 const mainNavigation = [
   { name: "Home", href: "/" },
+  { name: "About the Author", href: "/author" },
+  { name: "About the Book", href: "/book" },
   { name: "Blog", href: "/blog" },
-];
-
-// Dropdown navigation items
-const aboutDropdown = [
-  { name: "Author", href: "/author", description: "Learn about Arthur M. Horwitz" },
-  { name: "Book", href: "/book", description: "Discover the story behind the book" },
-  { name: "Second Generation", href: "/second-generation", description: "Understanding second-generation Holocaust survivors and inherited trauma" },
-  { name: "Themes", href: "/themes", description: "Explore key themes" },
-];
-
-const resourcesDropdown = [
-  { name: "Events", href: "/events", description: "Upcoming speaking events" },
-  { name: "Press", href: "/press", description: "Media coverage" },
-  { name: "Contact", href: "/contact", description: "Get in touch" },
+  { name: "Media & Events", href: "/events" },
+  { name: "Contact", href: "/contact" },
+  { name: "Newsletter Sign Up", href: "/newsletter" },
 ];
 
 export function SiteHeader() {
@@ -37,8 +26,6 @@ export function SiteHeader() {
   // Combined navigation for mobile menu
   const mobileNavigation = [
     ...mainNavigation,
-    ...aboutDropdown.map(item => ({ name: item.name, href: item.href })),
-    ...resourcesDropdown.map(item => ({ name: item.name, href: item.href })),
   ];
 
   // Handle body scroll locking when mobile menu is open
@@ -92,14 +79,14 @@ export function SiteHeader() {
       onClick={handleHeaderClick}
     >
       <nav 
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" 
+        className="mx-auto flex w-full items-center justify-between p-6 lg:px-8" 
         aria-label="Global"
       >
         {/* Logo */}
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 focus:outline-none focus:ring-0" onClick={() => setMobileMenuOpen(false)}>
             <span className="sr-only">{siteConfig.name}</span>
-            <h1 className={`text-xl font-serif font-bold ${componentUtils.text.primary}`}>
+            <h1 className={`text-xl lg:text-2xl font-serif font-bold whitespace-nowrap ${componentUtils.text.primary}`}>
               {siteConfig.name}
             </h1>
           </Link>
@@ -137,23 +124,17 @@ export function SiteHeader() {
               {item.name}
             </Link>
           ))}
-          
-          {/* About dropdown */}
-          <NavigationDropdown label="About" items={aboutDropdown} />
-          
-          {/* Resources dropdown */}
-          <NavigationDropdown label="Resources" items={resourcesDropdown} />
         </div>
 
-        {/* Desktop social media dropdown and CTA */}
+        {/* Desktop social media links and CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4">
-          <SocialMediaDropdown />
+          <SocialMediaLinks size="sm" />
           <Link
             href="/book"
             className="text-sm font-medium leading-6 bg-gradient-to-r from-burgundy to-brown hover:from-burgundy/90 hover:to-brown/90 px-4 py-2 rounded-lg transition-all duration-200 cursor-pointer text-white shadow-sm hover:shadow-md"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Buy the Book
+            {new Date() < new Date('2026-05-19') ? 'Pre-Order Now' : 'Buy Now'}
           </Link>
         </div>
       </nav>
@@ -204,15 +185,14 @@ export function SiteHeader() {
                     </div>
                     <div className="py-6">
                       <div className="mb-6">
-                        <p className={`text-sm mb-3 ${componentUtils.text.secondary}`}>Follow Arthur on social media</p>
-                        <SocialMediaLinks size="sm" />
+                        <SocialMediaLinks size="md" />
                       </div>
                       <Link
                         href="/book"
                         className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-medium leading-7 bg-gradient-to-r from-burgundy to-brown hover:from-burgundy/90 hover:to-brown/90 transition-all duration-200 cursor-pointer text-white shadow-sm hover:shadow-md"
                         onClick={() => setMobileMenuOpen(false)}
                       >
-                        Buy the Book
+                        {new Date() < new Date('2026-05-19') ? 'Pre-Order Now' : 'Buy Now'}
                       </Link>
                     </div>
                   </div>
