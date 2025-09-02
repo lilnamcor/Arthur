@@ -7,6 +7,9 @@ import { siteConfig } from "@/config/site";
 import { SocialMediaLinks } from "@/components/SocialMediaLinks";
 import { componentUtils } from "@/lib/design-system";
 
+// Custom breakpoint styles for 1152px
+const customBreakpoint = "min-width: 1152px";
+
 // Main navigation items (always visible)
 const mainNavigation = [
   { name: "Home", href: "/" },
@@ -61,8 +64,6 @@ export function SiteHeader() {
     };
   }, []);
 
-
-
   const handleHeaderClick = (e: React.MouseEvent) => {
     // Don't close if clicking on interactive elements
     const target = e.target as HTMLElement;
@@ -73,71 +74,108 @@ export function SiteHeader() {
   };
 
   return (
-    <header 
-      ref={headerRef} 
-      className="sticky top-0 z-50 w-full border-b border-brown/20 bg-parchment/95 backdrop-blur supports-[backdrop-filter]:bg-parchment/60"
-      onClick={handleHeaderClick}
-    >
-      <nav 
-        className="mx-auto flex w-full items-center justify-between p-6 lg:px-8" 
-        aria-label="Global"
+    <>
+      <style jsx>{`
+        @media (${customBreakpoint}) {
+          .header-desktop-only {
+            display: flex !important;
+          }
+          .header-mobile-only {
+            display: none !important;
+          }
+          .nav-desktop {
+            padding-top: 0 !important;
+            padding-bottom: 1rem !important;
+          }
+        }
+        @media (max-width: 1151px) {
+          .header-desktop-only {
+            display: none !important;
+          }
+          .header-mobile-only {
+            display: flex !important;
+          }
+          .nav-desktop {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+          }
+        }
+      `}</style>
+      <header 
+        ref={headerRef} 
+        className="sticky top-0 z-50 w-full border-b border-brown/20 bg-parchment/95 backdrop-blur supports-[backdrop-filter]:bg-parchment/60"
+        onClick={handleHeaderClick}
       >
-        {/* Logo */}
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 focus:outline-none focus:ring-0" onClick={() => setMobileMenuOpen(false)}>
+        {/* Desktop title - centered above navigation */}
+        <div className="header-desktop-only justify-center pt-3">
+          <Link href="/" className="focus:outline-none focus:ring-0" onClick={() => setMobileMenuOpen(false)}>
             <span className="sr-only">{siteConfig.name}</span>
-            <h1 className={`text-xl lg:text-2xl font-serif font-bold whitespace-nowrap ${componentUtils.text.primary}`}>
+            <h1 className={`text-2xl lg:text-3xl font-serif font-bold whitespace-nowrap ${componentUtils.text.primary}`}>
               {siteConfig.name}
             </h1>
           </Link>
         </div>
 
-        {/* Mobile menu button */}
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className={`-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 ${componentUtils.text.secondary} hover:bg-burgundy/10 hover:text-burgundy transition-colors duration-200 cursor-pointer`}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? "Close main menu" : "Open main menu"}
-          >
-            <span className="sr-only">{mobileMenuOpen ? "Close main menu" : "Open main menu"}</span>
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              )}
-            </svg>
-          </button>
-        </div>
+        <nav 
+          className="nav-desktop mx-auto flex w-full items-center justify-between px-6 pb-4 lg:px-8" 
+          aria-label="Global"
+        >
+          {/* Mobile/tablet layout: Menu button on left, title centered */}
+          <div className="header-mobile-only items-center">
+            <button
+              type="button"
+              className={`-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 ${componentUtils.text.secondary} hover:bg-burgundy/10 hover:text-burgundy transition-colors duration-200 cursor-pointer`}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close main menu" : "Open main menu"}
+            >
+              <span className="sr-only">{mobileMenuOpen ? "Close main menu" : "Open main menu"}</span>
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                )}
+              </svg>
+            </button>
+          </div>
 
-        {/* Desktop navigation */}
-        <div className="hidden lg:flex lg:gap-x-8 lg:items-center">
-          {/* Main navigation items */}
-          {mainNavigation.map((item) => (
+          {/* Mobile/tablet title - centered */}
+          <div className="header-mobile-only flex-1 justify-center">
+            <Link href="/" className="focus:outline-none focus:ring-0" onClick={() => setMobileMenuOpen(false)}>
+              <span className="sr-only">{siteConfig.name}</span>
+              <h1 className={`text-xl font-serif font-bold whitespace-nowrap ${componentUtils.text.primary}`}>
+                {siteConfig.name}
+              </h1>
+            </Link>
+          </div>
+
+          {/* Desktop navigation - centered horizontally on page */}
+          <div className="header-desktop-only gap-x-8 items-center">
+            {/* Main navigation items */}
+            {mainNavigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`text-sm font-medium leading-6 ${componentUtils.text.secondary} hover:text-burgundy transition-colors duration-200`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* Desktop social media links and CTA */}
+          <div className="header-desktop-only flex-1 justify-end items-center gap-4">
+            <SocialMediaLinks size="sm" />
             <Link
-              key={item.name}
-              href={item.href}
-              className={`text-sm font-medium leading-6 ${componentUtils.text.secondary} hover:text-burgundy transition-colors duration-200`}
+              href="/book"
+              className="text-sm font-medium leading-6 bg-gradient-to-r from-burgundy to-brown hover:from-burgundy/90 hover:to-brown/90 px-4 py-2 rounded-lg transition-all duration-200 cursor-pointer text-white shadow-sm hover:shadow-md"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {item.name}
+              {new Date() < new Date('2026-05-19') ? 'Pre-Order Now' : 'Buy Now'}
             </Link>
-          ))}
-        </div>
-
-        {/* Desktop social media links and CTA */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4">
-          <SocialMediaLinks size="sm" />
-          <Link
-            href="/book"
-            className="text-sm font-medium leading-6 bg-gradient-to-r from-burgundy to-brown hover:from-burgundy/90 hover:to-brown/90 px-4 py-2 rounded-lg transition-all duration-200 cursor-pointer text-white shadow-sm hover:shadow-md"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {new Date() < new Date('2026-05-19') ? 'Pre-Order Now' : 'Buy Now'}
-          </Link>
-        </div>
-      </nav>
+          </div>
+        </nav>
 
       {/* Mobile menu */}
       <AnimatePresence>
@@ -203,5 +241,6 @@ export function SiteHeader() {
         )}
       </AnimatePresence>
     </header>
+    </>
   );
 }

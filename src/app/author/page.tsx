@@ -14,22 +14,15 @@ export const metadata: Metadata = {
 export default function AuthorPage() {
   return (
     <main>
-      {/* Hero Section */}
+      {/* Hero Section - Photo and Short Blurb Side by Side */}
       <Section className={componentUtils.background.accent}>
-        <div className="text-center">
+        <div className="text-center mb-12">
           <h1 className={`text-4xl font-serif font-bold sm:text-6xl mb-6 ${componentUtils.text.primary}`}>
             About the Author
           </h1>
-            <p className={`text-xl max-w-6xl mx-auto ${componentUtils.text.secondary}`}>
-            Arthur M. Horwitz is a nationally known journalist, publisher and civic leader whose distinguished career was capped by the establishment of the Arthur M. Horwitz Collection at the University of Michigan&apos;s Bentley Historical Library and his 2020 enshrinement into the Michigan Journalism Hall of Fame.
-            </p>
         </div>
-      </Section>
-
-      {/* Author Bio */}
-      <Section className={componentUtils.background.primary}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="order-2 lg:order-1">
             <div className="rounded-2xl border border-brown/20 overflow-hidden shadow-xl bg-parchment">
               <Image
                 src="/author-photo.jpg"
@@ -40,34 +33,45 @@ export default function AuthorPage() {
               />
             </div>
           </div>
-          <div>
-            <h2 className={`text-3xl font-serif font-bold mb-6 ${componentUtils.text.primary}`}>
-              Arthur M. Horwitz
-            </h2>
-            <p className={`mb-6 ${componentUtils.text.secondary}`}>
+          <div className="order-1 lg:order-2 text-center lg:text-left">
+                                        <p className={`text-xl max-w-4xl mx-auto lg:mx-0 ${componentUtils.text.primary}`}>
+                <span className="text-4xl font-bold">Arthur M. Horwitz</span> is a nationally known journalist, publisher and civic leader whose distinguished career was capped by the establishment of the Arthur M. Horwitz Collection at the University of Michigan&apos;s Bentley Historical Library and his 2020 enshrinement into the Michigan Journalism Hall of Fame.
+              </p>
+              <div className="flex flex-row gap-4 justify-center mt-8">
+                <Link href="/book">
+                  <CTAButton variant="primary" size="lg">
+                    Read the Book
+                  </CTAButton>
+                </Link>
+                <Link href="/contact">
+                  <CTAButton variant="outline" size="lg">
+                    Get in Touch
+                  </CTAButton>
+                </Link>
+              </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Author Bio - Longer Text */}
+      <Section className={componentUtils.background.primary}>
+        <div className="max-w-4xl mx-auto">
+          <h2 className={`text-3xl font-serif font-bold mb-8 text-center ${componentUtils.text.primary}`}>
+            Biography
+          </h2>
+                    <div className="space-y-6">
+            <p className={`${componentUtils.text.secondary}`}>
               Possessing broad and deep contacts across secular, ethnic and minority media platforms in multiple states and Israel, Arthur is recognized by his peers as a consensus-building leader, effective communicator and media visionary. He is a past chair of Detroit Public Television/Detroit PBS and the Michigan Civil Rights Commission, where he led public hearings and presented its nationally cited final report on the underlying causes of the Flint Water Crisis. He was also co-founder of New Michigan Media, an innovative consortium of more than 120 ethnic and minority media outlets that elevated their visibility and clout.
             </p>
-            <p className={`mb-6 ${componentUtils.text.secondary}`}>
+            <p className={`${componentUtils.text.secondary}`}>
               A persuasive and sought-after speaker, he has appeared often on affiliate news programs of ABC, NBC, PBS and NPR and served as a moderator of journalism panels. As the child of a Holocaust survivor, he has sensitively and effectively shared the story of his &quot;Dual Identities&quot; with thousands of middle and high school-age students during visits to Michigan&apos;s Zekelman Holocaust Center. His insights are frequently solicited by print and media outlets for breaking news stories.
             </p>
-            <p className={`mb-6 ${componentUtils.text.secondary}`}>
+            <p className={`${componentUtils.text.secondary}`}>
               Among those recognizing Arthur&apos;s efforts have been New Detroit with its Closing the Gap in Race Relations award, the ADL with its inaugural Path to Truth award, Hospice of Michigan with its Crystal Rose award and along with Mitch Albom, the Birmingham Community House with its Community Pillar award.
             </p>
-            <p className={`mb-8 ${componentUtils.text.secondary}`}>
+            <p className={`${componentUtils.text.secondary}`}>
               He currently serves on the board of the Amherst-based Yiddish Book Center, where he chairs its finance and audit committees, and is co-leading Detroit Horse Power&apos;s capital campaign to construct the country&apos;s largest urban equestrian center, addressing the emotional and developmental needs of Detroit&apos;s underserved youth. A native of New Haven, Connecticut, Arthur is a graduate of the University of Connecticut and the Yale School of Organization and Management. In celebration of the 350th anniversary of Jewish life in America, the Jewish Historical Society of Greater New Haven recognized him as a nationally prominent writer, author or poet with New Haven connections.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/book">
-                <CTAButton variant="primary" size="lg">
-                  Read the Book
-                </CTAButton>
-              </Link>
-              <Link href="/contact">
-                <CTAButton variant="outline" size="lg">
-                  Get in Touch
-                </CTAButton>
-              </Link>
-            </div>
           </div>
         </div>
       </Section>
