@@ -5,9 +5,9 @@ export const siteConfig = {
   ogImage: "https://arthurmyronhorwitz.com/og.jpg",
   links: {
     twitter: "https://twitter.com/arthurhorwitz",
-    facebook: "https://facebook.com/arthurhorwitz",
+    facebook: "https://www.facebook.com/arthur.horwitz.5",
     instagram: "https://instagram.com/arthurhorwitz",
-    linkedin: "https://linkedin.com/in/arthurhorwitz",
+    linkedin: "https://www.linkedin.com/in/arthur-horwitz-15378a24",
     youtube: "https://youtube.com/@arthurhorwitz",
   },
   book: {

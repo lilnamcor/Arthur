@@ -4,6 +4,7 @@ import { CTAButton } from "@/components/CTAButton";
 import { componentUtils } from "@/lib/design-system";
 import Image from "next/image";
 import Link from "next/link";
+import Endorsement from "@/components/Endorsement";
 
 export const metadata: Metadata = {
   title: "Books About the Holocaust | Second Generation Holocaust Books | Arthur M. Horwitz - Dual Identities: Living in Meier's Shadow",
@@ -62,11 +63,26 @@ export default function HomePage() {
                 <h1 className={`text-3xl font-serif font-bold sm:text-4xl mb-6 ${componentUtils.text.primary}`}>
                   Arthur M. Horwitz
                 </h1>
-                                 <p className={`text-lg mb-6 leading-relaxed ${componentUtils.text.secondary}`}>
-                   Arthur M. Horwitz is a writer, educator, and second-generation Holocaust survivor whose work explores the complex intersections of memory, identity, and trauma. Born in Brooklyn in 1955 to Holocaust survivors, Arthur developed what he calls &quot;dual identities&quot; - his own life and the one his uncle Meier never had.
+                                 <p className={`mb-6 leading-relaxed ${componentUtils.text.secondary}`}>
+                   Arthur M. Horwitz is a nationally respected journalist, publisher and civic leader whose career is recognized by enshrinement in the
+Michigan Journalism Hall of Fame, establishment of the Arthur M. Horwitz Collection at the University of Michigan and awarding
+of publisher emeritus status for the Detroit Jewish News, where he served as publisher and executive editor for more than 30 years.
                  </p>
+                <p className={`mb-6 leading-relaxed ${componentUtils.text.secondary}`}>
+                The child of a survivor mother and American-born father, Arthur has sensitively and effectively shared his “dual identities” story
+                with thousands of students during their visits to the Zekelman Holocaust Center.
+                </p>
+                <p className={`mb-6 leading-relaxed ${componentUtils.text.secondary}`}>
+                Arthur’s writing has appeared in secular and ethnic publications and academic journals. A persuasive and sought-after speaker, he
+                is a frequent panelist on affiliate news programs of ABC, NBC, PBS and NPR.
+                </p>
+                <p className={`mb-6 leading-relaxed ${componentUtils.text.secondary}`}>
+                A convener and bridge builder, Arthur chaired the Michigan Civil Rights Commission and the board of Detroit/PBS. He co-
+                founded New Michigan Media, a consortium of more than 100 minority media outlets.
+                </p>
                 <p className={`mb-8 leading-relaxed ${componentUtils.text.secondary}`}>
-                  After graduating from Brooklyn College with a degree in English Literature, Arthur pursued a career in education, teaching high school English for over three decades. Throughout his teaching career, he found himself drawn to stories of survival, resilience, and the human capacity for both cruelty and compassion.
+                A former paperboy and copyboy for New Haven’s daily newspapers, Arthur is a graduate of the University of Connecticut and the
+                Yale School of Management.
                 </p>
                 <Link href="/author">
                   <CTAButton variant="secondary" size="lg" className="w-full sm:w-auto">
@@ -99,24 +115,25 @@ export default function HomePage() {
                                  <h2 className={`text-2xl font-serif font-bold sm:text-3xl mb-4 ${componentUtils.text.primary}`}>
                    Dual Identities: Living in Meier&apos;s Shadow
                  </h2>
-                <p className={`text-lg mb-6 leading-relaxed ${componentUtils.text.secondary}`}>
-                  This groundbreaking memoir explores the complex journey of identity formation for children of Holocaust survivors, offering a unique perspective on how trauma is inherited and shapes entire families. As one of the definitive books about second generation Holocaust experiences, this work expands the Holocaust memoir genre by giving voice to children of survivors.
+                <p className={`mb-6 leading-relaxed ${componentUtils.text.secondary}`}>
+                Seeking to swipe a few bucks from his mother’s wallet, Arthur Myron Horwitz discovers the iconic Holocaust image of a terrified
+boy. “Who’s this?” he demands to know. She insists it’s her little brother Meier, murdered by the Germans. But Arthur knows it
+isn’t, and challenges her. As punishment for his adolescent insolence, Arthur is saddled with the responsibility of living two lives
+- his and the one Meier never had. It’s a burden that shapes Arthur’s life, family and media career.
                 </p>
 
-                {/* Endorsement */}
-                <div className={`mb-8 p-6 rounded-lg bg-parchment/50 border border-brown/20 ${componentUtils.text.secondary}`}>
-                  <div className="mb-3">
-                    <svg className="w-6 h-6 text-orange" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                    </svg>
-                  </div>
-                                     <blockquote className="italic mb-3">
-                     &quot;Dual Identities is an insightful, personal memoir of a Holocaust topic not often explored: growing up as a child of a Survivor. Among the thousands of books about the Holocaust, Dual Identities is one that presents a unique, distinctive and thoughtful perspective about the impact of the Holocaust upon children of survivors.&quot;
-                   </blockquote>
-                  <p className="font-semibold text-sm">
-                    — Mark Oppenheimer
-                  </p>
-                </div>
+                <p className={`mb-6 leading-relaxed ${componentUtils.text.secondary}`}>
+                With warmth and candor, <strong><em>Dual Identities: Living in Meier&apos;s Shadow</em></strong> boldly fills a void in Holocaust literature while removing
+filters previously inhibiting children of survivors from sharing their own, unvarnished growing-up-in-America stories. It also
+provides new insights on the impact of intergenerational trauma and timeless lessons for combating an alarming rise in national
+and global antisemitism.
+                </p>
+
+                <Endorsement
+                  quote="I'm a tough man to please when it comes to memoirs, but Arthur Horwitz's touching, searching book left me pleased - very pleased. With warmth and candor, Dual Identities made me homesick for his home, and nostalgic for memories that aren't even mine. A thoroughly compelling read!"
+                  authorName="Mark Oppenheimer"
+                  authorCredentials="former Beliefs Columnist, The New York Times; creator and founding host, &ldquo;Unorthodox&rdquo; podcast; author, Squirrel Hill: The Tree of Life Shooting and the Soul of a Neighborhood"
+                />
 
                 <Link href="/book">
                   <CTAButton variant="primary" size="lg" className="w-full sm:w-auto">

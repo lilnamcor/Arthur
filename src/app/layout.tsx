@@ -3,6 +3,7 @@ import { Merriweather, Inter } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { siteConfig } from "@/config/site";
 
 const merriweather = Merriweather({
   variable: "--font-merriweather",
@@ -72,7 +73,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Books About the Holocaust | Second Generation Holocaust Books | Arthur M. Horwitz",
     description: "Discover powerful books about the Holocaust and second generation Holocaust trauma. Essential reading for understanding Holocaust impact across generations.",
-    creator: "@arthurhorwitz",
+    creator: siteConfig.social.twitter,
     images: ["https://arthurmyronhorwitz.com/book-cover.jpg"],
   },
   robots: {

@@ -20,9 +20,9 @@ export default function AuthorPage() {
           <h1 className={`text-4xl font-serif font-bold sm:text-6xl mb-6 ${componentUtils.text.primary}`}>
             About the Author
           </h1>
-          <p className={`text-xl max-w-6xl mx-auto ${componentUtils.text.secondary}`}>
-            Arthur M. Horwitz is a writer, educator, and second-generation Holocaust survivor whose work explores the complex intersections of memory, identity, and trauma.
-          </p>
+            <p className={`text-xl max-w-6xl mx-auto ${componentUtils.text.secondary}`}>
+            Arthur M. Horwitz is a nationally known journalist, publisher and civic leader whose distinguished career was capped by the establishment of the Arthur M. Horwitz Collection at the University of Michigan&apos;s Bentley Historical Library and his 2020 enshrinement into the Michigan Journalism Hall of Fame.
+            </p>
         </div>
       </Section>
 
@@ -45,13 +45,16 @@ export default function AuthorPage() {
               Arthur M. Horwitz
             </h2>
             <p className={`mb-6 ${componentUtils.text.secondary}`}>
-              Arthur M. Horwitz was born in Brooklyn, New York, in 1955, the son of Holocaust survivors. His father, Meier Horwitz, survived Auschwitz and Bergen-Belsen, while his mother, Sarah, survived the Warsaw Ghetto and multiple concentration camps. Growing up in a household where the Holocaust was both ever-present and rarely discussed, Arthur developed what he calls &quot;dual identities&quot; - his own life and the one his uncle Meier never had.
+              Possessing broad and deep contacts across secular, ethnic and minority media platforms in multiple states and Israel, Arthur is recognized by his peers as a consensus-building leader, effective communicator and media visionary. He is a past chair of Detroit Public Television/Detroit PBS and the Michigan Civil Rights Commission, where he led public hearings and presented its nationally cited final report on the underlying causes of the Flint Water Crisis. He was also co-founder of New Michigan Media, an innovative consortium of more than 120 ethnic and minority media outlets that elevated their visibility and clout.
             </p>
             <p className={`mb-6 ${componentUtils.text.secondary}`}>
-              After graduating from Brooklyn College with a degree in English Literature, Arthur pursued a career in education, teaching high school English for over three decades. Throughout his teaching career, he found himself drawn to stories of survival, resilience, and the human capacity for both cruelty and compassion. His classroom became a space where students could explore difficult questions about history, identity, and what it means to be human.
+              A persuasive and sought-after speaker, he has appeared often on affiliate news programs of ABC, NBC, PBS and NPR and served as a moderator of journalism panels. As the child of a Holocaust survivor, he has sensitively and effectively shared the story of his &quot;Dual Identities&quot; with thousands of middle and high school-age students during visits to Michigan&apos;s Zekelman Holocaust Center. His insights are frequently solicited by print and media outlets for breaking news stories.
+            </p>
+            <p className={`mb-6 ${componentUtils.text.secondary}`}>
+              Among those recognizing Arthur&apos;s efforts have been New Detroit with its Closing the Gap in Race Relations award, the ADL with its inaugural Path to Truth award, Hospice of Michigan with its Crystal Rose award and along with Mitch Albom, the Birmingham Community House with its Community Pillar award.
             </p>
             <p className={`mb-8 ${componentUtils.text.secondary}`}>
-              &quot;Dual Identities: Living in Meier&apos;s Shadow&quot; is Arthur&apos;s first book, though he has been writing about his experiences and the broader themes of second-generation trauma for many years. His work has appeared in various literary journals and anthologies, and he has spoken at numerous conferences and events about the importance of bearing witness and the responsibility of memory.
+              He currently serves on the board of the Amherst-based Yiddish Book Center, where he chairs its finance and audit committees, and is co-leading Detroit Horse Power&apos;s capital campaign to construct the country&apos;s largest urban equestrian center, addressing the emotional and developmental needs of Detroit&apos;s underserved youth. A native of New Haven, Connecticut, Arthur is a graduate of the University of Connecticut and the Yale School of Organization and Management. In celebration of the 350th anniversary of Jewish life in America, the Jewish Historical Society of Greater New Haven recognized him as a nationally prominent writer, author or poet with New Haven connections.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/book">
