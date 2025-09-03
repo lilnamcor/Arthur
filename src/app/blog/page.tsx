@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 const categories = [
+  "Personal Stories",
   "Second-Generation Trauma",
   "Memory & Identity",
   "Healing & Understanding",
@@ -19,6 +20,15 @@ const categories = [
 ];
 
 const blogPosts = [
+  {
+    slug: "remembering-the-first-time",
+    title: "Remembering the First Time",
+    excerpt: "A personal story about the author's first experience riding a horse named Elsie, exploring themes of memory, first experiences, and personal growth.",
+    category: "Personal Stories",
+    date: "December 25, 2024",
+    readTime: "6 min read",
+    featured: false,
+  },
   {
     slug: "books-about-holocaust-second-generation",
     title: "Books About the Holocaust: A Comprehensive Guide to Second Generation Trauma",
